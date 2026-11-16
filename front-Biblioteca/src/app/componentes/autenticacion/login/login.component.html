@@ -1,0 +1,59 @@
+<main class="login-page">
+  <section class="login-art">
+    <div class="art-mark">b.</div>
+    <div class="art-copy">
+      <h1>El conocimiento<br />siempre encuentra<br />su camino.</h1>
+      <p>Una biblioteca viva, hecha para explorar y compartir.</p>
+    </div>
+    <div class="art-footer">BIBLIOTECA · SISTEMA DE GESTIÓN</div>
+  </section>
+  <section class="login-side">
+    <div class="login-card">
+      <div class="mobile-brand">b. <span>Biblioteca</span></div>
+      <h2>Inicia sesión</h2>
+      <p class="muted">Accede a tu espacio en la biblioteca.</p>
+      @if (registrado) {
+        <div class="registered">Tu cuenta se creó correctamente. Ya puedes iniciar sesión.</div>
+      }
+      <form [formGroup]="form" (ngSubmit)="entrar()">
+        <label for="email">Correo electrónico</label
+        ><input
+          id="email"
+          type="email"
+          formControlName="email"
+          placeholder="nombre@correo.com"
+          autocomplete="username"
+        />
+        @if (form.controls.email.touched && form.controls.email.invalid) {
+          <small class="field-error">Ingresa un correo válido.</small>
+        }
+        <label for="clave">Contraseña</label
+        ><input
+          id="clave"
+          type="password"
+          formControlName="clave"
+          placeholder="Tu contraseña"
+          autocomplete="current-password"
+        />
+        @if (form.controls.clave.touched && form.controls.clave.invalid) {
+          <small class="field-error">Ingresa al menos 6 caracteres.</small>
+        }
+        @if (error) {
+          <div class="alert">{{ error }}</div>
+        }
+        <button class="button primary submit" [disabled]="cargando">
+          {{
+            cargando
+              ? 'Ingresando…'
+              : 'Ingresar a la
+                    biblioteca'
+          }}
+          <span>→</span>
+        </button>
+      </form>
+      <p class="login-foot">
+        ¿Aún no tienes una cuenta? <a routerLink="/registro">Solicita acceso</a>
+      </p>
+    </div>
+  </section>
+</main>

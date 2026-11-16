@@ -1,0 +1,91 @@
+<section class="form-page">
+  <a class="back" routerLink="/catalogo">← Volver al catálogo</a>
+  <div class="form-heading">
+    <h1>{{ id ? 'Editar libro' : 'Registrar un libro' }}</h1>
+    <p>Completa los datos bibliográficos para mantener el catálogo al día.</p>
+  </div>
+  <form [formGroup]="form" (ngSubmit)="guardar()">
+    <section class="form-card">
+      <h2>Información del libro</h2>
+      <p class="hint">Los campos marcados con * son obligatorios.</p>
+      <div class="fields">
+        <label class="wide"
+          >Título *<input formControlName="titulo" placeholder="Ej. Cien años de soledad" />
+          @if (form.controls.titulo.touched && form.controls.titulo.invalid) {
+            <small>El título es obligatorio (máximo 160 caracteres).</small>
+          }</label
+        ><label
+          >Autor *<input formControlName="autor" placeholder="Nombre del autor" />
+          @if (form.controls.autor.touched && form.controls.autor.invalid) {
+            <small>El autor es obligatorio.</small>
+          }</label
+        ><label
+          >Categoría<select formControlName="categoriaId">
+            <option value="">Selecciona una categoría</option>
+            @for (c of categorias; track c.id) {
+              <option [value]="c.id">{{ c.nombre }}</option>
+            }
+          </select></label
+        ><label>Editorial<input formControlName="editorial" placeholder="Editorial" /></label
+        ><label>ISBN<input formControlName="isbn" placeholder="978-..." maxlength="20" /></label
+        ><label
+          >Año de publicación<input
+            formControlName="anioPublicacion"
+            type="number"
+            min="1"
+            [max]="2026"
+            placeholder="2024"
+        /></label>
+        <label
+          >Cantidad de ejemplares<input formControlName="ejemplaresTotales" type="number" min="1" max="9999" />
+          @if (form.controls.ejemplaresTotales.invalid && form.controls.ejemplaresTotales.touched) {
+            <small>Registra al menos un ejemplar.</small>
+          }
+        </label>
+      </div>
+      <section class="cover-upload" aria-labelledby="cover-upload-title">
+        <div class="cover-preview" aria-hidden="true">
+          @if (fuentePortada) {
+            <img [src]="fuentePortada" [alt]="'Portada de ' + form.controls.titulo.value" />
+          } @else {
+            <span>B<span>.</span></span
+            ><small>VISTA PREVIA<br />DE PORTADA</small>
+          }
+        </div>
+        <div class="cover-upload-copy">
+          <h3 id="cover-upload-title">Imagen de portada</h3>
+          <p>La verá el lector junto a los datos del libro en el catálogo.</p>
+          <label for="portada-file">Seleccionar imagen</label>
+          <input
+            #portadaFile
+            id="portada-file"
+            type="file"
+            accept="image/jpeg,image/png,image/webp"
+            (change)="seleccionarPortada($event)"
+          />
+          <small
+            >JPG, PNG o WEBP · máximo 5 MB. Si no seleccionas otra, se conserva la portada
+            actual.</small
+          >
+          @if (archivoPortada) {
+            <button type="button" class="cover-reset" (click)="quitarSeleccionPortada(portadaFile)">
+              Quitar selección
+            </button>
+          }
+          @if (errorPortada) {
+            <small class="cover-error">{{ errorPortada }}</small>
+          }
+        </div>
+      </section>
+      @if (error) {
+        <div class="error">{{ error }}</div>
+      }
+      <div class="actions">
+        <a class="cancel" routerLink="/catalogo">Cancelar</a
+        ><button class="save" [disabled]="cargando">
+          {{ cargando ? 'Guardando…' : id ? 'Guardar cambios' : 'Registrar libro' }} <span>→</span>
+        </button>
+      </div>
+    </section>
+  </form>
+</section>

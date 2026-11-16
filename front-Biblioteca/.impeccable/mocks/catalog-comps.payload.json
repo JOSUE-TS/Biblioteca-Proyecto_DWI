@@ -1,0 +1,36 @@
+{
+  "title": "Elige la composición del catálogo",
+  "question": "¿Cuál de estas composiciones quieres aprobar? Puedes indicar después qué detalle de las otras te gustaría conservar.",
+  "options": [
+    {
+      "id": "cover",
+      "label": "Portada de colección",
+      "thesis": "El catálogo abre como una portada editorial y convierte el primer registro en el foco.",
+      "palette": ["#ede8dd", "#f6f3eb", "#202722", "#9f402c"],
+      "materials": ["papel marfil", "tinta oscura", "sello de imprenta"],
+      "viewport": "Título grande, índice de disponibilidad, buscador y una composición de libro que acompaña el estado vacío.",
+      "risk": "Con pocos registros puede dejar más espacio en blanco del necesario.",
+      "comp": ".impeccable/mocks/comp-01-cover.png"
+    },
+    {
+      "id": "spread",
+      "label": "Doble página editorial",
+      "thesis": "El título y la acción viven en el margen; el espacio principal se reserva al catálogo.",
+      "palette": ["#ede8dd", "#f6f3eb", "#202722", "#9f402c"],
+      "materials": ["papel marfil", "tinta oscura", "sello de imprenta"],
+      "viewport": "Columna tipográfica estrecha, controles de búsqueda alineados y registro abierto en la página derecha.",
+      "risk": "El título de dos columnas ocupa una parte considerable del primer pliegue.",
+      "comp": ".impeccable/mocks/comp-02-spread.png"
+    },
+    {
+      "id": "ledger",
+      "label": "Índice tipográfico",
+      "thesis": "Un registro amplio y preciso presenta la colección como un índice fácil de recorrer.",
+      "palette": ["#ede8dd", "#f6f3eb", "#202722", "#9f402c"],
+      "materials": ["papel marfil", "tinta oscura", "sello de imprenta"],
+      "viewport": "Encabezado compacto, datos en una línea, filtro y un gran folio de estado que se convierte en la tabla al llegar libros.",
+      "risk": "Su orden de registro puede sentirse más administrativo que de librería.",
+      "comp": ".impeccable/mocks/comp-03-ledger.png"
+    }
+  ]
+}

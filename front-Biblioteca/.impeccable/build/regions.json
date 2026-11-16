@@ -1,0 +1,302 @@
+{
+  "regions": [
+    {
+      "id": "page-ground",
+      "kind": "chrome",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 1,
+        "h": 1
+      },
+      "note": "Pale uncoated-paper field across the page.",
+      "container": true
+    },
+    {
+      "id": "navigation-rail",
+      "kind": "chrome",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 0.164,
+        "h": 1
+      },
+      "note": "Narrow catalog index rail and account footer."
+    },
+    {
+      "id": "brand-initial",
+      "kind": "text",
+      "box": {
+        "x": 0.0167,
+        "y": 0.03,
+        "w": 0.028,
+        "h": 0.035
+      },
+      "note": "Letter B and red full stop."
+    },
+    {
+      "id": "brand-caption",
+      "kind": "text",
+      "box": {
+        "x": 0.0167,
+        "y": 0.075,
+        "w": 0.09,
+        "h": 0.016
+      },
+      "note": "BIBLIOTECA · GESTIÓN."
+    },
+    {
+      "id": "catalog-section-label",
+      "kind": "text",
+      "box": {
+        "x": 0.0167,
+        "y": 0.143,
+        "w": 0.08,
+        "h": 0.016
+      },
+      "note": "CATÁLOGO navigation group label."
+    },
+    {
+      "id": "nav-all-books",
+      "kind": "control",
+      "box": {
+        "x": 0.0167,
+        "y": 0.168,
+        "w": 0.13,
+        "h": 0.043
+      },
+      "note": "Selected Todos los libros navigation item and outlined book icon."
+    },
+    {
+      "id": "nav-create-book",
+      "kind": "control",
+      "box": {
+        "x": 0.022,
+        "y": 0.221,
+        "w": 0.11,
+        "h": 0.03
+      },
+      "note": "Registrar libro navigation link with plus icon."
+    },
+    {
+      "id": "circulation-section-label",
+      "kind": "text",
+      "box": {
+        "x": 0.0167,
+        "y": 0.302,
+        "w": 0.12,
+        "h": 0.016
+      },
+      "note": "CIRCULACIÓN navigation group label."
+    },
+    {
+      "id": "nav-loans",
+      "kind": "control",
+      "box": {
+        "x": 0.022,
+        "y": 0.33,
+        "w": 0.1,
+        "h": 0.03
+      },
+      "note": "Préstamos navigation link with return-book outline icon."
+    },
+    {
+      "id": "account-footer",
+      "kind": "chrome",
+      "box": {
+        "x": 0.0167,
+        "y": 0.925,
+        "w": 0.14,
+        "h": 0.06
+      },
+      "note": "Signed-in administrator avatar, email and role."
+    },
+    {
+      "id": "breadcrumb",
+      "kind": "text",
+      "box": {
+        "x": 0.201,
+        "y": 0.025,
+        "w": 0.15,
+        "h": 0.016
+      },
+      "note": "Biblioteca / 01 / PORTADA breadcrumb."
+    },
+    {
+      "id": "catalog-caption",
+      "kind": "text",
+      "box": {
+        "x": 0.873,
+        "y": 0.025,
+        "w": 0.1,
+        "h": 0.016
+      },
+      "note": "CATÁLOGO DE COLECCIÓN."
+    },
+    {
+      "id": "catalog-title",
+      "kind": "text",
+      "box": {
+        "x": 0.201,
+        "y": 0.115,
+        "w": 0.21,
+        "h": 0.105
+      },
+      "note": "Large two-line Catálogo de libros headline."
+    },
+    {
+      "id": "catalog-description",
+      "kind": "text",
+      "box": {
+        "x": 0.201,
+        "y": 0.256,
+        "w": 0.24,
+        "h": 0.02
+      },
+      "note": "Explora la colección y encuentra tu próxima lectura."
+    },
+    {
+      "id": "primary-register",
+      "kind": "control",
+      "box": {
+        "x": 0.878,
+        "y": 0.227,
+        "w": 0.084,
+        "h": 0.046
+      },
+      "note": "Rust-red Registrar libro button with plus icon."
+    },
+    {
+      "id": "count-titles",
+      "kind": "text",
+      "box": {
+        "x": 0.201,
+        "y": 0.316,
+        "w": 0.055,
+        "h": 0.02
+      },
+      "note": "Zero Títulos availability count."
+    },
+    {
+      "id": "count-available",
+      "kind": "text",
+      "box": {
+        "x": 0.261,
+        "y": 0.316,
+        "w": 0.075,
+        "h": 0.02
+      },
+      "note": "Zero Disponibles availability count."
+    },
+    {
+      "id": "count-loans",
+      "kind": "text",
+      "box": {
+        "x": 0.338,
+        "y": 0.316,
+        "w": 0.08,
+        "h": 0.02
+      },
+      "note": "Zero En préstamo availability count."
+    },
+    {
+      "id": "search-control",
+      "kind": "control",
+      "box": {
+        "x": 0.201,
+        "y": 0.366,
+        "w": 0.676,
+        "h": 0.048
+      },
+      "note": "Search input with magnifier and title, author or category hint."
+    },
+    {
+      "id": "availability-filter",
+      "kind": "control",
+      "box": {
+        "x": 0.899,
+        "y": 0.366,
+        "w": 0.064,
+        "h": 0.04
+      },
+      "note": "Todos los libros availability select."
+    },
+    {
+      "id": "empty-cover",
+      "kind": "chrome",
+      "box": {
+        "x": 0.201,
+        "y": 0.444,
+        "w": 0.106,
+        "h": 0.197
+      },
+      "note": "Typographic book-cover motif with B. mark and printed AÚN SIN TÍTULOS stamp."
+    },
+    {
+      "id": "cover-mark",
+      "kind": "text",
+      "box": {
+        "x": 0.211,
+        "y": 0.458,
+        "w": 0.04,
+        "h": 0.052
+      },
+      "note": "Oversized B. cover mark."
+    },
+    {
+      "id": "cover-caption",
+      "kind": "text",
+      "box": {
+        "x": 0.212,
+        "y": 0.539,
+        "w": 0.07,
+        "h": 0.025
+      },
+      "note": "CATÁLOGO DE BIBLIOTECA cover imprint."
+    },
+    {
+      "id": "cover-stamp",
+      "kind": "text",
+      "box": {
+        "x": 0.211,
+        "y": 0.581,
+        "w": 0.08,
+        "h": 0.04
+      },
+      "note": "AÚN SIN TÍTULOS stamp."
+    },
+    {
+      "id": "empty-title",
+      "kind": "text",
+      "box": {
+        "x": 0.338,
+        "y": 0.457,
+        "w": 0.25,
+        "h": 0.065
+      },
+      "note": "Una colección empieza con su primer libro."
+    },
+    {
+      "id": "empty-description",
+      "kind": "text",
+      "box": {
+        "x": 0.338,
+        "y": 0.548,
+        "w": 0.26,
+        "h": 0.04
+      },
+      "note": "The API-backed empty catalog explanation."
+    },
+    {
+      "id": "empty-register-action",
+      "kind": "control",
+      "box": {
+        "x": 0.338,
+        "y": 0.605,
+        "w": 0.13,
+        "h": 0.025
+      },
+      "note": "Registrar el primer libro text link and arrow."
+    }
+  ]
+}

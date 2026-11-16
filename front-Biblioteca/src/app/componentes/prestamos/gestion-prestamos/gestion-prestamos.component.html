@@ -1,0 +1,116 @@
+<section class="loans-page">
+  <div class="heading">
+    <div>
+      <h1>Préstamos</h1>
+      <p>Administra entregas, fechas y devoluciones.</p>
+    </div>
+    <button class="new" (click)="modal = true">＋ Registrar préstamo</button>
+  </div>
+  <div class="loan-stats">
+    <article>
+      <small>TOTAL REGISTRADOS</small><strong>{{ prestamos.length }}</strong>
+    </article>
+    <article>
+      <small>PRÉSTAMOS ACTIVOS</small><strong>{{ activos }}</strong>
+    </article>
+    <article>
+      <small>DEVUELTOS</small><strong>{{ prestamos.length - activos }}</strong>
+    </article>
+  </div>
+  @if (ok) {
+    <div class="ok">{{ ok }}</div>
+  }
+  @if (error) {
+    <div class="error">{{ error }}</div>
+  }
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>LIBRO</th>
+          <th>LECTOR</th>
+          <th>FECHA DE PRÉSTAMO</th>
+          <th>FECHA ESTIMADA</th>
+          <th>ESTADO</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (p of prestamos; track p.id) {
+          <tr>
+            <td>
+              <strong>{{ p.libro.titulo }}</strong
+              ><small>{{ p.libro.autor }}</small>
+            </td>
+            <td>
+              <strong>{{ p.usuario.nombre }} {{ p.usuario.apellido }}</strong
+              ><small>{{ p.usuario.codigo }}</small>
+            </td>
+            <td>{{ p.fechaPrestamo }}</td>
+            <td>{{ p.fechaEstimada }}</td>
+            <td>
+              <span class="status" [class.returned]="p.fechaDevolucion">{{
+                p.fechaDevolucion ? 'Devuelto' : 'Activo'
+              }}</span>
+            </td>
+            <td>
+              @if (!p.fechaDevolucion) {
+                <button class="return" (click)="devolver(p)">Devolver</button>
+              }
+            </td>
+          </tr>
+        } @empty {
+          @if (!cargando) {
+            <tr>
+              <td colspan="6" class="empty">Aún no hay préstamos registrados.</td>
+            </tr>
+          }
+        }
+      </tbody>
+    </table>
+    @if (cargando) {
+      <div class="loading">Cargando préstamos…</div>
+    }
+  </div>
+</section>
+@if (modal) {
+  <div class="backdrop" (click)="modal = false">
+    <section class="dialog" (click)="$event.stopPropagation()">
+      <button class="close" (click)="modal = false" aria-label="Cerrar">×</button>
+      <h2>Registrar préstamo</h2>
+      <p>El libro debe estar disponible en el catálogo.</p>
+      <form [formGroup]="form" (ngSubmit)="registrar()">
+        <label
+          >Libro disponible<select formControlName="libroId">
+            <option value="">Selecciona un libro</option>
+            @for (l of libros; track l.id) {
+              <option [value]="l.id">{{ l.titulo }} · {{ l.autor }}</option>
+            }
+          </select></label
+        ><label
+          >Lector<select formControlName="usuarioId">
+            <option value="">Selecciona un lector</option>
+            @for (u of usuarios; track u.id) {
+              <option [value]="u.id">{{ u.nombre }} {{ u.apellido }} · {{ u.codigo }}</option>
+            }
+          </select></label
+        ><label
+          >Fecha estimada de devolución<input
+            type="date"
+            [min]="hoy"
+            formControlName="fechaEstimada" /></label
+        ><label
+          >Observación<textarea
+            formControlName="observacion"
+            rows="2"
+            placeholder="Opcional"
+          ></textarea>
+        </label>
+        <div class="dialog-actions">
+          <button type="button" class="cancel" (click)="modal = false">Cancelar</button
+          ><button class="new">Confirmar préstamo →</button>
+        </div>
+      </form>
+    </section>
+  </div>
+}

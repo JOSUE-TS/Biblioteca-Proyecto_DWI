@@ -1,0 +1,1584 @@
+{
+  "tool": "comp-spec",
+  "version": 1,
+  "createdAt": "2026-11-16T00:43:50.128Z",
+  "comp": ".impeccable/mocks/comp-01-cover.png",
+  "warnings": [
+    "region page-ground: \"container\": true set in the regions file (the region-size refusal is overridden: one undivided element)"
+  ],
+  "uncoveredInkCells": [],
+  "compSize": {
+    "width": 1440,
+    "height": 900
+  },
+  "aspect": 1.6,
+  "orientation": "landscape",
+  "palette": [
+    {
+      "hex": "#f8f8e8",
+      "coverage": 0.9701
+    },
+    {
+      "hex": "#d4c6b6",
+      "coverage": 0.0219
+    },
+    {
+      "hex": "#282828",
+      "coverage": 0.0043
+    },
+    {
+      "hex": "#984828",
+      "coverage": 0.0037
+    }
+  ],
+  "bands": [
+    {
+      "y": 0.275,
+      "strength": 0.2083
+    }
+  ],
+  "regions": [
+    {
+      "id": "page-ground",
+      "kind": "chrome",
+      "note": "Pale uncoated-paper field across the page.",
+      "grid": null,
+      "container": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 1,
+        "h": 1
+      },
+      "px": {
+        "x": 0,
+        "y": 0,
+        "w": 1440,
+        "h": 900
+      },
+      "aspect": 1.6,
+      "palette": [
+        {
+          "hex": "#f8f8e8",
+          "coverage": 0.9701
+        },
+        {
+          "hex": "#d4c6b6",
+          "coverage": 0.0219
+        },
+        {
+          "hex": "#282828",
+          "coverage": 0.0043
+        },
+        {
+          "hex": "#984828",
+          "coverage": 0.0037
+        }
+      ],
+      "detail": {
+        "energy": 5.5897
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "navigation-rail",
+      "kind": "chrome",
+      "note": "Narrow catalog index rail and account footer.",
+      "grid": null,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 0.164,
+        "h": 1
+      },
+      "px": {
+        "x": 0,
+        "y": 0,
+        "w": 236,
+        "h": 900
+      },
+      "aspect": 0.2622,
+      "palette": [
+        {
+          "hex": "#f8f8e8",
+          "coverage": 0.9946
+        },
+        {
+          "hex": "#e0d8c0",
+          "coverage": 0.0054
+        }
+      ],
+      "detail": {
+        "energy": 2.402
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "brand-initial",
+      "kind": "text",
+      "note": "Letter B and red full stop.",
+      "grid": null,
+      "box": {
+        "x": 0.0167,
+        "y": 0.03,
+        "w": 0.028,
+        "h": 0.035
+      },
+      "px": {
+        "x": 24,
+        "y": 27,
+        "w": 40,
+        "h": 32
+      },
+      "aspect": 1.25,
+      "palette": [
+        {
+          "hex": "#f8f8e8",
+          "coverage": 0.8836
+        },
+        {
+          "hex": "#b56828",
+          "coverage": 0.0411
+        },
+        {
+          "hex": "#6bb8e5",
+          "coverage": 0.0342
+        },
+        {
+          "hex": "#282c2c",
+          "coverage": 0.0274
+        },
+        {
+          "hex": "#a04830",
+          "coverage": 0.0137
+        }
+      ],
+      "detail": {
+        "energy": 7.5713
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": null,
+        "measuredAt": "2026-11-16T00:44:00.079Z",
+        "note": "no separable lettering in the crop; size by the region box"
+      }
+    },
+    {
+      "id": "brand-caption",
+      "kind": "text",
+      "note": "BIBLIOTECA · GESTIÓN.",
+      "grid": null,
+      "box": {
+        "x": 0.0167,
+        "y": 0.075,
+        "w": 0.09,
+        "h": 0.016
+      },
+      "px": {
+        "x": 24,
+        "y": 68,
+        "w": 130,
+        "h": 14
+      },
+      "aspect": 9.2857,
+      "palette": [
+        {
+          "hex": "#f8f8e7",
+          "coverage": 0.89
+        },
+        {
+          "hex": "#989698",
+          "coverage": 0.0431
+        },
+        {
+          "hex": "#f5f2b5",
+          "coverage": 0.0239
+        },
+        {
+          "hex": "#959ebe",
+          "coverage": 0.0239
+        },
+        {
+          "hex": "#c4988c",
+          "coverage": 0.0191
+        }
+      ],
+      "detail": {
+        "energy": 10.8482
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": null,
+        "measuredAt": "2026-11-16T00:44:00.187Z",
+        "note": "no separable lettering in the crop; size by the region box"
+      }
+    },
+    {
+      "id": "catalog-section-label",
+      "kind": "text",
+      "note": "CATÁLOGO navigation group label.",
+      "grid": null,
+      "box": {
+        "x": 0.0167,
+        "y": 0.143,
+        "w": 0.08,
+        "h": 0.016
+      },
+      "px": {
+        "x": 24,
+        "y": 129,
+        "w": 115,
+        "h": 14
+      },
+      "aspect": 8.2143,
+      "palette": [
+        {
+          "hex": "#f8f8e7",
+          "coverage": 0.9282
+        },
+        {
+          "hex": "#9bb0cd",
+          "coverage": 0.0308
+        },
+        {
+          "hex": "#a3a89d",
+          "coverage": 0.0154
+        },
+        {
+          "hex": "#cdad9d",
+          "coverage": 0.0154
+        },
+        {
+          "hex": "#d0f0e8",
+          "coverage": 0.0103
+        }
+      ],
+      "detail": {
+        "energy": 8.3524
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 8,
+          "capHeightPx": 7.3,
+          "inkIsDark": true,
+          "allCaps": true,
+          "advance": 0.7356,
+          "advTall": 0.787,
+          "advX": null,
+          "gap": 0.2053,
+          "xRatio": null,
+          "stemW": 0.2105,
+          "contrast": 1.0633,
+          "serif": null,
+          "densTall": 0.566,
+          "densX": null,
+          "weight": 0.566
+        },
+        "widthClass": "wide",
+        "weightClass": "bold"
+      }
+    },
+    {
+      "id": "nav-all-books",
+      "kind": "control",
+      "note": "Selected Todos los libros navigation item and outlined book icon.",
+      "grid": null,
+      "box": {
+        "x": 0.0167,
+        "y": 0.168,
+        "w": 0.13,
+        "h": 0.043
+      },
+      "px": {
+        "x": 24,
+        "y": 151,
+        "w": 187,
+        "h": 39
+      },
+      "aspect": 4.7949,
+      "palette": [
+        {
+          "hex": "#e9e9d9",
+          "coverage": 0.9724
+        },
+        {
+          "hex": "#29292b",
+          "coverage": 0.0138
+        },
+        {
+          "hex": "#485040",
+          "coverage": 0.005
+        },
+        {
+          "hex": "#687084",
+          "coverage": 0.005
+        },
+        {
+          "hex": "#5da3cd",
+          "coverage": 0.0038
+        }
+      ],
+      "detail": {
+        "energy": 10.7937
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "nav-create-book",
+      "kind": "control",
+      "note": "Registrar libro navigation link with plus icon.",
+      "grid": null,
+      "box": {
+        "x": 0.022,
+        "y": 0.221,
+        "w": 0.11,
+        "h": 0.03
+      },
+      "px": {
+        "x": 32,
+        "y": 199,
+        "w": 158,
+        "h": 27
+      },
+      "aspect": 5.8519,
+      "palette": [
+        {
+          "hex": "#f8f8e8",
+          "coverage": 0.94
+        },
+        {
+          "hex": "#f8d49c",
+          "coverage": 0.0236
+        },
+        {
+          "hex": "#736d6a",
+          "coverage": 0.015
+        },
+        {
+          "hex": "#939891",
+          "coverage": 0.015
+        },
+        {
+          "hex": "#739dc8",
+          "coverage": 0.0064
+        }
+      ],
+      "detail": {
+        "energy": 9.7953
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "circulation-section-label",
+      "kind": "text",
+      "note": "CIRCULACIÓN navigation group label.",
+      "grid": null,
+      "box": {
+        "x": 0.0167,
+        "y": 0.302,
+        "w": 0.12,
+        "h": 0.016
+      },
+      "px": {
+        "x": 24,
+        "y": 272,
+        "w": 173,
+        "h": 14
+      },
+      "aspect": 12.3571,
+      "palette": [
+        {
+          "hex": "#f8f8e8",
+          "coverage": 0.9437
+        },
+        {
+          "hex": "#ddbd95",
+          "coverage": 0.0211
+        },
+        {
+          "hex": "#9ebbd8",
+          "coverage": 0.0176
+        },
+        {
+          "hex": "#b8989d",
+          "coverage": 0.0106
+        },
+        {
+          "hex": "#989080",
+          "coverage": 0.007
+        }
+      ],
+      "detail": {
+        "energy": 9.7109
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 11,
+          "capHeightPx": 7.3,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.7179,
+          "advTall": 0.7521,
+          "advX": 0.6666,
+          "gap": 0.2051,
+          "xRatio": 0.842,
+          "stemW": 0.206,
+          "contrast": 1.0085,
+          "serif": 0.2723,
+          "densTall": 0.5377,
+          "densX": 0.623,
+          "weight": 0.5377
+        },
+        "widthClass": "normal",
+        "weightClass": "medium"
+      }
+    },
+    {
+      "id": "nav-loans",
+      "kind": "control",
+      "note": "Préstamos navigation link with return-book outline icon.",
+      "grid": null,
+      "box": {
+        "x": 0.022,
+        "y": 0.33,
+        "w": 0.1,
+        "h": 0.03
+      },
+      "px": {
+        "x": 32,
+        "y": 297,
+        "w": 144,
+        "h": 27
+      },
+      "aspect": 5.3333,
+      "palette": [
+        {
+          "hex": "#f8f8e8",
+          "coverage": 0.9522
+        },
+        {
+          "hex": "#f5e0ab",
+          "coverage": 0.0144
+        },
+        {
+          "hex": "#b5b3ad",
+          "coverage": 0.0144
+        },
+        {
+          "hex": "#a5d8e2",
+          "coverage": 0.012
+        },
+        {
+          "hex": "#7398c3",
+          "coverage": 0.0072
+        }
+      ],
+      "detail": {
+        "energy": 9.2667
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "account-footer",
+      "kind": "chrome",
+      "note": "Signed-in administrator avatar, email and role.",
+      "grid": null,
+      "box": {
+        "x": 0.0167,
+        "y": 0.925,
+        "w": 0.14,
+        "h": 0.06
+      },
+      "px": {
+        "x": 24,
+        "y": 833,
+        "w": 202,
+        "h": 54
+      },
+      "aspect": 3.7407,
+      "palette": [
+        {
+          "hex": "#f8f8e8",
+          "coverage": 0.9196
+        },
+        {
+          "hex": "#e8d8b8",
+          "coverage": 0.0618
+        },
+        {
+          "hex": "#d49444",
+          "coverage": 0.0068
+        },
+        {
+          "hex": "#b094a0",
+          "coverage": 0.0068
+        },
+        {
+          "hex": "#f3cd98",
+          "coverage": 0.0051
+        }
+      ],
+      "detail": {
+        "energy": 10.4174
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "breadcrumb",
+      "kind": "text",
+      "note": "Biblioteca / 01 / PORTADA breadcrumb.",
+      "grid": null,
+      "box": {
+        "x": 0.201,
+        "y": 0.025,
+        "w": 0.15,
+        "h": 0.016
+      },
+      "px": {
+        "x": 289,
+        "y": 23,
+        "w": 216,
+        "h": 14
+      },
+      "aspect": 15.4286,
+      "palette": [
+        {
+          "hex": "#f8f8e7",
+          "coverage": 0.9494
+        },
+        {
+          "hex": "#c8f5e8",
+          "coverage": 0.0149
+        },
+        {
+          "hex": "#5860a0",
+          "coverage": 0.0119
+        },
+        {
+          "hex": "#e0a480",
+          "coverage": 0.0119
+        },
+        {
+          "hex": "#9cb8cc",
+          "coverage": 0.0119
+        }
+      ],
+      "detail": {
+        "energy": 21.7484
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 21,
+          "capHeightPx": 7.1,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.6731,
+          "advTall": 0.7439,
+          "advX": 0.6376,
+          "gap": 0.1417,
+          "xRatio": 0.7363,
+          "stemW": 0.2134,
+          "contrast": 1.1416,
+          "serif": 0.2951,
+          "densTall": 0.6548,
+          "densX": 0.7097,
+          "weight": 0.6548
+        },
+        "widthClass": "normal",
+        "weightClass": "bold"
+      }
+    },
+    {
+      "id": "catalog-caption",
+      "kind": "text",
+      "note": "CATÁLOGO DE COLECCIÓN.",
+      "grid": null,
+      "box": {
+        "x": 0.873,
+        "y": 0.025,
+        "w": 0.1,
+        "h": 0.016
+      },
+      "px": {
+        "x": 1257,
+        "y": 23,
+        "w": 144,
+        "h": 14
+      },
+      "aspect": 10.2857,
+      "palette": [
+        {
+          "hex": "#f8f8e8",
+          "coverage": 0.8596
+        },
+        {
+          "hex": "#969abc",
+          "coverage": 0.0395
+        },
+        {
+          "hex": "#efd4a1",
+          "coverage": 0.0395
+        },
+        {
+          "hex": "#e0a686",
+          "coverage": 0.0351
+        },
+        {
+          "hex": "#a0c8e5",
+          "coverage": 0.0263
+        }
+      ],
+      "detail": {
+        "energy": 21.1409
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 19,
+          "capHeightPx": 7.3,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.7188,
+          "advTall": 0.7531,
+          "advX": 0.7188,
+          "gap": 0.1712,
+          "xRatio": 0.8425,
+          "stemW": 0.2072,
+          "contrast": 1.049,
+          "serif": 0.4494,
+          "densTall": 0.5378,
+          "densX": 0.5578,
+          "weight": 0.5378
+        },
+        "widthClass": "normal",
+        "weightClass": "medium"
+      }
+    },
+    {
+      "id": "catalog-title",
+      "kind": "text",
+      "note": "Large two-line Catálogo de libros headline.",
+      "grid": null,
+      "box": {
+        "x": 0.201,
+        "y": 0.115,
+        "w": 0.21,
+        "h": 0.105
+      },
+      "px": {
+        "x": 289,
+        "y": 104,
+        "w": 302,
+        "h": 95
+      },
+      "aspect": 3.1789,
+      "palette": [
+        {
+          "hex": "#f8f8e8",
+          "coverage": 0.7986
+        },
+        {
+          "hex": "#282828",
+          "coverage": 0.1241
+        },
+        {
+          "hex": "#ccc9c3",
+          "coverage": 0.0379
+        },
+        {
+          "hex": "#60625f",
+          "coverage": 0.0269
+        },
+        {
+          "hex": "#334232",
+          "coverage": 0.0125
+        }
+      ],
+      "detail": {
+        "energy": 43.3178
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 2,
+          "glyphs": 12,
+          "capHeightPx": 37.8,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.6891,
+          "advTall": 0.739,
+          "advX": 0.648,
+          "gap": 0.0547,
+          "xRatio": 0.6793,
+          "stemW": 0.1629,
+          "contrast": 2.0818,
+          "serif": 1.1645,
+          "densTall": 0.4162,
+          "densX": 0.4379,
+          "weight": 0.4162
+        },
+        "widthClass": "normal",
+        "weightClass": "regular",
+        "chosen": {
+          "family": "Shippori Mincho",
+          "weight": 700,
+          "fontSizePx": 54,
+          "source": "catalog",
+          "estimatedSize": true,
+          "stamp": "405408b36c83"
+        }
+      }
+    },
+    {
+      "id": "catalog-description",
+      "kind": "text",
+      "note": "Explora la colección y encuentra tu próxima lectura.",
+      "grid": null,
+      "box": {
+        "x": 0.201,
+        "y": 0.256,
+        "w": 0.24,
+        "h": 0.02
+      },
+      "px": {
+        "x": 289,
+        "y": 230,
+        "w": 346,
+        "h": 18
+      },
+      "aspect": 19.2222,
+      "palette": [
+        {
+          "hex": "#f8f8e8",
+          "coverage": 0.8766
+        },
+        {
+          "hex": "#f8e4b2",
+          "coverage": 0.0344
+        },
+        {
+          "hex": "#8eadd6",
+          "coverage": 0.0328
+        },
+        {
+          "hex": "#cc9b6e",
+          "coverage": 0.0281
+        },
+        {
+          "hex": "#7c8cac",
+          "coverage": 0.0281
+        }
+      ],
+      "detail": {
+        "energy": 32.1825
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 40,
+          "capHeightPx": 9.1,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.6625,
+          "advTall": 0.3312,
+          "advX": 0.6625,
+          "gap": 0.0736,
+          "xRatio": 0.7164,
+          "stemW": 0.1931,
+          "contrast": 1.2153,
+          "serif": 0.2962,
+          "densTall": 0.6177,
+          "densX": 0.5707,
+          "weight": 0.6177
+        },
+        "widthClass": "normal",
+        "weightClass": "bold"
+      }
+    },
+    {
+      "id": "primary-register",
+      "kind": "control",
+      "note": "Rust-red Registrar libro button with plus icon.",
+      "grid": null,
+      "box": {
+        "x": 0.878,
+        "y": 0.227,
+        "w": 0.084,
+        "h": 0.046
+      },
+      "px": {
+        "x": 1264,
+        "y": 204,
+        "w": 121,
+        "h": 41
+      },
+      "aspect": 2.9512,
+      "palette": [
+        {
+          "hex": "#984828",
+          "coverage": 0.9443
+        },
+        {
+          "hex": "#f8f8e8",
+          "coverage": 0.0305
+        },
+        {
+          "hex": "#a86d66",
+          "coverage": 0.0126
+        },
+        {
+          "hex": "#e4dcf0",
+          "coverage": 0.0072
+        },
+        {
+          "hex": "#f3b328",
+          "coverage": 0.0054
+        }
+      ],
+      "detail": {
+        "energy": 9.8092
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "count-titles",
+      "kind": "text",
+      "note": "Zero Títulos availability count.",
+      "grid": null,
+      "box": {
+        "x": 0.201,
+        "y": 0.316,
+        "w": 0.055,
+        "h": 0.02
+      },
+      "px": {
+        "x": 289,
+        "y": 284,
+        "w": 79,
+        "h": 18
+      },
+      "aspect": 4.3889,
+      "palette": [
+        {
+          "hex": "#f8f8e7",
+          "coverage": 0.8968
+        },
+        {
+          "hex": "#7bb8dd",
+          "coverage": 0.0387
+        },
+        {
+          "hex": "#dbcbc8",
+          "coverage": 0.0323
+        },
+        {
+          "hex": "#988d88",
+          "coverage": 0.0194
+        },
+        {
+          "hex": "#c8e8e8",
+          "coverage": 0.0129
+        }
+      ],
+      "detail": {
+        "energy": 9.6277
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 5,
+          "capHeightPx": 10.6,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.3764,
+          "advTall": 0.7842,
+          "advX": 0.3764,
+          "gap": 0.0941,
+          "xRatio": 0.4873,
+          "stemW": 0.0943,
+          "contrast": 0.8418,
+          "serif": null,
+          "densTall": 0.5663,
+          "densX": 0.5415,
+          "weight": 0.5663
+        },
+        "widthClass": "compressed",
+        "weightClass": "bold"
+      }
+    },
+    {
+      "id": "count-available",
+      "kind": "text",
+      "note": "Zero Disponibles availability count.",
+      "grid": null,
+      "box": {
+        "x": 0.261,
+        "y": 0.316,
+        "w": 0.075,
+        "h": 0.02
+      },
+      "px": {
+        "x": 376,
+        "y": 284,
+        "w": 108,
+        "h": 18
+      },
+      "aspect": 6,
+      "palette": [
+        {
+          "hex": "#f7f8e7",
+          "coverage": 0.8945
+        },
+        {
+          "hex": "#cdf1e6",
+          "coverage": 0.0352
+        },
+        {
+          "hex": "#8e95b5",
+          "coverage": 0.0251
+        },
+        {
+          "hex": "#e5ab85",
+          "coverage": 0.0251
+        },
+        {
+          "hex": "#acd0e8",
+          "coverage": 0.0201
+        }
+      ],
+      "detail": {
+        "energy": 13.1742
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 8,
+          "capHeightPx": 10.4,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.448,
+          "advTall": 0.832,
+          "advX": 0.384,
+          "gap": 0.096,
+          "xRatio": 0.4727,
+          "stemW": 0.1164,
+          "contrast": 1.0002,
+          "serif": 1.8434,
+          "densTall": 0.5795,
+          "densX": 0.603,
+          "weight": 0.5795
+        },
+        "widthClass": "compressed",
+        "weightClass": "bold"
+      }
+    },
+    {
+      "id": "count-loans",
+      "kind": "text",
+      "note": "Zero En préstamo availability count.",
+      "grid": null,
+      "box": {
+        "x": 0.338,
+        "y": 0.316,
+        "w": 0.08,
+        "h": 0.02
+      },
+      "px": {
+        "x": 487,
+        "y": 284,
+        "w": 115,
+        "h": 18
+      },
+      "aspect": 6.3889,
+      "palette": [
+        {
+          "hex": "#f8f8e8",
+          "coverage": 0.9263
+        },
+        {
+          "hex": "#c8e5e5",
+          "coverage": 0.023
+        },
+        {
+          "hex": "#f4cc90",
+          "coverage": 0.0184
+        },
+        {
+          "hex": "#90a4c4",
+          "coverage": 0.0184
+        },
+        {
+          "hex": "#f3f3c3",
+          "coverage": 0.0138
+        }
+      ],
+      "detail": {
+        "energy": 10.9277
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 8,
+          "capHeightPx": 10.7,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.683,
+          "advTall": 0.5588,
+          "advX": 0.4346,
+          "gap": 0.0621,
+          "xRatio": 0.4862,
+          "stemW": 0.1327,
+          "contrast": 1.0537,
+          "serif": null,
+          "densTall": 0.5292,
+          "densX": 0.6271,
+          "weight": 0.5292
+        },
+        "widthClass": "condensed",
+        "weightClass": "medium"
+      }
+    },
+    {
+      "id": "search-control",
+      "kind": "control",
+      "note": "Search input with magnifier and title, author or category hint.",
+      "grid": null,
+      "box": {
+        "x": 0.201,
+        "y": 0.366,
+        "w": 0.676,
+        "h": 0.048
+      },
+      "px": {
+        "x": 289,
+        "y": 329,
+        "w": 973,
+        "h": 43
+      },
+      "aspect": 22.6279,
+      "palette": [
+        {
+          "hex": "#f6f6e6",
+          "coverage": 0.9907
+        },
+        {
+          "hex": "#9b958d",
+          "coverage": 0.0043
+        },
+        {
+          "hex": "#e0c096",
+          "coverage": 0.0021
+        },
+        {
+          "hex": "#b0d0e8",
+          "coverage": 0.0017
+        },
+        {
+          "hex": "#98a0c0",
+          "coverage": 0.0012
+        }
+      ],
+      "detail": {
+        "energy": 4.6979
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "availability-filter",
+      "kind": "control",
+      "note": "Todos los libros availability select.",
+      "grid": null,
+      "box": {
+        "x": 0.899,
+        "y": 0.366,
+        "w": 0.064,
+        "h": 0.04
+      },
+      "px": {
+        "x": 1295,
+        "y": 329,
+        "w": 92,
+        "h": 36
+      },
+      "aspect": 2.5556,
+      "palette": [
+        {
+          "hex": "#f8f8e8",
+          "coverage": 0.9451
+        },
+        {
+          "hex": "#d8c8c8",
+          "coverage": 0.0247
+        },
+        {
+          "hex": "#c5e8e3",
+          "coverage": 0.0165
+        },
+        {
+          "hex": "#f3ddb8",
+          "coverage": 0.0082
+        },
+        {
+          "hex": "#d8a888",
+          "coverage": 0.0055
+        }
+      ],
+      "detail": {
+        "energy": 8.5077
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "empty-cover",
+      "kind": "chrome",
+      "note": "Typographic book-cover motif with B. mark and printed AÚN SIN TÍTULOS stamp.",
+      "grid": null,
+      "box": {
+        "x": 0.201,
+        "y": 0.444,
+        "w": 0.106,
+        "h": 0.197
+      },
+      "px": {
+        "x": 289,
+        "y": 400,
+        "w": 153,
+        "h": 177
+      },
+      "aspect": 0.8644,
+      "palette": [
+        {
+          "hex": "#d7c7b7",
+          "coverage": 0.9057
+        },
+        {
+          "hex": "#f0f0e0",
+          "coverage": 0.0405
+        },
+        {
+          "hex": "#ae9888",
+          "coverage": 0.0309
+        },
+        {
+          "hex": "#783838",
+          "coverage": 0.0147
+        },
+        {
+          "hex": "#af684f",
+          "coverage": 0.0082
+        }
+      ],
+      "detail": {
+        "energy": 7.8993
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "cover-mark",
+      "kind": "text",
+      "note": "Oversized B. cover mark.",
+      "grid": null,
+      "box": {
+        "x": 0.211,
+        "y": 0.458,
+        "w": 0.04,
+        "h": 0.052
+      },
+      "px": {
+        "x": 304,
+        "y": 412,
+        "w": 58,
+        "h": 47
+      },
+      "aspect": 1.234,
+      "palette": [
+        {
+          "hex": "#d7c7b7",
+          "coverage": 0.8281
+        },
+        {
+          "hex": "#783838",
+          "coverage": 0.1344
+        },
+        {
+          "hex": "#b89a88",
+          "coverage": 0.0219
+        },
+        {
+          "hex": "#885545",
+          "coverage": 0.0156
+        }
+      ],
+      "detail": {
+        "energy": 6.1468
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": null,
+        "measuredAt": "2026-11-16T00:44:01.452Z",
+        "note": "no separable lettering in the crop; size by the region box"
+      }
+    },
+    {
+      "id": "cover-caption",
+      "kind": "text",
+      "note": "CATÁLOGO DE BIBLIOTECA cover imprint.",
+      "grid": null,
+      "box": {
+        "x": 0.212,
+        "y": 0.539,
+        "w": 0.07,
+        "h": 0.025
+      },
+      "px": {
+        "x": 305,
+        "y": 485,
+        "w": 101,
+        "h": 23
+      },
+      "aspect": 4.3913,
+      "palette": [
+        {
+          "hex": "#d8c8b8",
+          "coverage": 0.8774
+        },
+        {
+          "hex": "#91adb0",
+          "coverage": 0.0536
+        },
+        {
+          "hex": "#d8c18f",
+          "coverage": 0.0268
+        },
+        {
+          "hex": "#a5a083",
+          "coverage": 0.023
+        },
+        {
+          "hex": "#a58278",
+          "coverage": 0.0192
+        }
+      ],
+      "detail": {
+        "energy": 8.6437
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 2,
+          "glyphs": 20,
+          "capHeightPx": 5.8,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.7781,
+          "advTall": 0.7852,
+          "advX": 0.8521,
+          "gap": 0.1386,
+          "xRatio": 0.8203,
+          "stemW": 0.2651,
+          "contrast": 1.1281,
+          "serif": null,
+          "densTall": 0.6053,
+          "densX": 0.5992,
+          "weight": 0.6053
+        },
+        "widthClass": "wide",
+        "weightClass": "bold"
+      }
+    },
+    {
+      "id": "cover-stamp",
+      "kind": "text",
+      "note": "AÚN SIN TÍTULOS stamp.",
+      "grid": null,
+      "box": {
+        "x": 0.211,
+        "y": 0.581,
+        "w": 0.08,
+        "h": 0.04
+      },
+      "px": {
+        "x": 304,
+        "y": 523,
+        "w": 115,
+        "h": 36
+      },
+      "aspect": 3.1944,
+      "palette": [
+        {
+          "hex": "#d7c7b7",
+          "coverage": 0.8731
+        },
+        {
+          "hex": "#b57f67",
+          "coverage": 0.0557
+        },
+        {
+          "hex": "#ab5241",
+          "coverage": 0.0423
+        },
+        {
+          "hex": "#cfb68d",
+          "coverage": 0.0156
+        },
+        {
+          "hex": "#a85870",
+          "coverage": 0.0134
+        }
+      ],
+      "detail": {
+        "energy": 16.0943
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": null,
+        "measuredAt": "2026-11-16T00:44:01.707Z",
+        "note": "no separable lettering in the crop; size by the region box"
+      }
+    },
+    {
+      "id": "empty-title",
+      "kind": "text",
+      "note": "Una colección empieza con su primer libro.",
+      "grid": null,
+      "box": {
+        "x": 0.338,
+        "y": 0.457,
+        "w": 0.25,
+        "h": 0.065
+      },
+      "px": {
+        "x": 487,
+        "y": 411,
+        "w": 360,
+        "h": 59
+      },
+      "aspect": 6.1017,
+      "palette": [
+        {
+          "hex": "#f8f8e8",
+          "coverage": 0.9061
+        },
+        {
+          "hex": "#292828",
+          "coverage": 0.0633
+        },
+        {
+          "hex": "#f8f4b7",
+          "coverage": 0.0116
+        },
+        {
+          "hex": "#492b28",
+          "coverage": 0.0106
+        },
+        {
+          "hex": "#b46a2a",
+          "coverage": 0.0083
+        }
+      ],
+      "detail": {
+        "energy": 57.288
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 2,
+          "glyphs": 34,
+          "capHeightPx": 20,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.5997,
+          "advTall": 0.3359,
+          "advX": 0.6015,
+          "gap": 0.0525,
+          "xRatio": 0.6378,
+          "stemW": 0.1628,
+          "contrast": 1.6552,
+          "serif": 1.118,
+          "densTall": 0.4652,
+          "densX": 0.474,
+          "weight": 0.4652
+        },
+        "widthClass": "normal",
+        "weightClass": "regular"
+      }
+    },
+    {
+      "id": "empty-description",
+      "kind": "text",
+      "note": "The API-backed empty catalog explanation.",
+      "grid": null,
+      "box": {
+        "x": 0.338,
+        "y": 0.548,
+        "w": 0.26,
+        "h": 0.04
+      },
+      "px": {
+        "x": 487,
+        "y": 493,
+        "w": 374,
+        "h": 36
+      },
+      "aspect": 10.3889,
+      "palette": [
+        {
+          "hex": "#f8f8e8",
+          "coverage": 0.9154
+        },
+        {
+          "hex": "#aed0e3",
+          "coverage": 0.0263
+        },
+        {
+          "hex": "#ecd2aa",
+          "coverage": 0.0219
+        },
+        {
+          "hex": "#949899",
+          "coverage": 0.019
+        },
+        {
+          "hex": "#ccefe6",
+          "coverage": 0.0175
+        }
+      ],
+      "detail": {
+        "energy": 24.8362
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 2,
+          "glyphs": 70,
+          "capHeightPx": 8.7,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.5978,
+          "advTall": 0.5978,
+          "advX": 0.6138,
+          "gap": 0.0603,
+          "xRatio": 0.7328,
+          "stemW": 0.207,
+          "contrast": 1.2472,
+          "serif": 0.7377,
+          "densTall": 0.5978,
+          "densX": 0.6197,
+          "weight": 0.5978
+        },
+        "widthClass": "normal",
+        "weightClass": "bold"
+      }
+    },
+    {
+      "id": "empty-register-action",
+      "kind": "control",
+      "note": "Registrar el primer libro text link and arrow.",
+      "grid": null,
+      "box": {
+        "x": 0.338,
+        "y": 0.605,
+        "w": 0.13,
+        "h": 0.025
+      },
+      "px": {
+        "x": 487,
+        "y": 545,
+        "w": 187,
+        "h": 23
+      },
+      "aspect": 8.1304,
+      "palette": [
+        {
+          "hex": "#f8f7e8",
+          "coverage": 0.9552
+        },
+        {
+          "hex": "#c3582a",
+          "coverage": 0.0143
+        },
+        {
+          "hex": "#f3b568",
+          "coverage": 0.0122
+        },
+        {
+          "hex": "#a85848",
+          "coverage": 0.0102
+        },
+        {
+          "hex": "#a084bc",
+          "coverage": 0.0081
+        }
+      ],
+      "detail": {
+        "energy": 19.1776
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    }
+  ]
+}

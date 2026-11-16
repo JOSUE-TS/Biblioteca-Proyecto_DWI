@@ -1,0 +1,38 @@
+<main class="register-page">
+  <a routerLink="/login" class="back">← Volver al acceso</a>
+  <section class="register-card">
+    <h1>Solicita tu acceso</h1>
+    <p class="intro">Crea tu cuenta para formar parte de nuestra comunidad lectora.</p>
+    <form [formGroup]="form" (ngSubmit)="registrar()">
+      <div class="row">
+        <label
+          >Nombre<input formControlName="nombre" autocomplete="given-name" />
+          @if (form.controls.nombre.touched && form.controls.nombre.invalid) {
+            <small>Este campo es obligatorio.</small>
+          }</label
+        ><label
+          >Apellido<input formControlName="apellido" autocomplete="family-name" />
+          @if (form.controls.apellido.touched && form.controls.apellido.invalid) {
+            <small>Este campo es obligatorio.</small>
+          }
+        </label>
+      </div>
+      <label
+        >Correo electrónico<input type="email" formControlName="email" autocomplete="email" />
+        @if (form.controls.email.touched && form.controls.email.invalid) {
+          <small>Ingresa un correo válido.</small>
+        }</label
+      ><label
+        >Contraseña<input type="password" formControlName="clave" autocomplete="new-password" />
+        @if (form.controls.clave.touched && form.controls.clave.invalid) {
+          <small>Usa al menos 8 caracteres.</small>
+        }
+      </label>
+      @if (error) {
+        <div class="error">{{ error }}</div>
+      }
+      <button [disabled]="cargando">{{ cargando ? 'Creando cuenta…' : 'Crear cuenta →' }}</button>
+    </form>
+    <p class="foot">¿Ya tienes una cuenta? <a routerLink="/login">Inicia sesión</a></p>
+  </section>
+</main>

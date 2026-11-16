@@ -1,0 +1,286 @@
+:host {
+    display: block
+}
+
+.loans-page {
+    max-width: 1180px;
+    margin: auto;
+    padding: 42px 48px
+}
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.eyebrow {
+    font-size: 10px;
+    letter-spacing: .15em;
+    font-weight: 700;
+    color: #76846f
+}
+
+.heading h1 {
+    font: 500 34px Georgia;
+    color: #223229;
+    margin: 10px 0 7px
+}
+
+.heading p {
+    font-size: 13px;
+    color: #7c837c;
+    margin: 0
+}
+
+.new {
+    border: 0;
+    border-radius: 6px;
+    background: #2d4337;
+    color: white;
+    padding: 12px 15px;
+    font-size: 12px;
+    font-weight: 650;
+    cursor: pointer
+}
+
+.new:hover {
+    background: #3a5645
+}
+
+.loan-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin: 26px 0
+}
+
+.loan-stats article {
+    background: white;
+    border: 1px solid #eae9e2;
+    border-radius: 8px;
+    padding: 17px 19px
+}
+
+.loan-stats small {
+    display: block;
+    font-size: 9px;
+    letter-spacing: .1em;
+    color: #8a8f87;
+    margin-bottom: 7px
+}
+
+.loan-stats strong {
+    font-size: 21px;
+    color: #29372f
+}
+
+.table-wrap {
+    overflow-x: auto;
+    background: white;
+    border: 1px solid #e9e9e2;
+    border-radius: 8px
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left;
+    white-space: nowrap
+}
+
+th {
+    background: #f7f7f3;
+    color: #838a80;
+    font-size: 9px;
+    letter-spacing: .1em;
+    padding: 14px 15px
+}
+
+td {
+    padding: 14px 15px;
+    border-top: 1px solid #eee;
+    font-size: 11px;
+    color: #646e65
+}
+
+td strong {
+    display: block;
+    font-size: 11px;
+    color: #344139
+}
+
+td small {
+    display: block;
+    color: #92978f;
+    font-size: 9px;
+    margin-top: 4px
+}
+
+.status {
+    font-size: 9px;
+    color: #936f37;
+    background: #f7f0df;
+    padding: 5px 8px;
+    border-radius: 10px
+}
+
+.status.returned {
+    color: #557650;
+    background: #eaf2e8
+}
+
+.return {
+    border: 1px solid #dfe4dc;
+    border-radius: 4px;
+    background: #fff;
+    color: #526a4d;
+    padding: 6px 9px;
+    font-size: 10px;
+    cursor: pointer
+}
+
+.empty,
+.loading {
+    text-align: center;
+    padding: 30px;
+    color: #8b9189;
+    font-size: 12px
+}
+
+.ok,
+.error {
+    padding: 10px 12px;
+    margin: 12px 0;
+    background: #eaf2e8;
+    color: #557650;
+    font-size: 12px;
+    border-radius: 5px
+}
+
+.error {
+    background: #fff0ed;
+    color: #9b4234
+}
+
+.backdrop {
+    position: fixed;
+    inset: 0;
+    background: #15231fc0;
+    display: grid;
+    place-items: center;
+    z-index: 10;
+    padding: 20px
+}
+
+.dialog {
+    position: relative;
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    width: min(100%, 470px);
+    box-shadow: 0 20px 70px #0003
+}
+
+.close {
+    position: absolute;
+    right: 16px;
+    top: 13px;
+    background: none;
+    border: 0;
+    font-size: 23px;
+    color: #798078;
+    cursor: pointer
+}
+
+.dialog h2 {
+    font: 500 26px Georgia;
+    color: #25352b;
+    margin: 9px 0 7px
+}
+
+.dialog>p {
+    font-size: 12px;
+    color: #81877f;
+    margin: 0 0 19px
+}
+
+.dialog form {
+    display: grid;
+    gap: 12px
+}
+
+.dialog label {
+    display: grid;
+    gap: 7px;
+    color: #4b554d;
+    font-size: 11px;
+    font-weight: 650
+}
+
+.dialog input,
+.dialog select,
+.dialog textarea {
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid #dedfd8;
+    border-radius: 5px;
+    padding: 10px;
+    font: 12px Arial;
+    color: #354137
+}
+
+.dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 7px
+}
+
+.cancel {
+    border: 1px solid #e0e2dc;
+    background: #fff;
+    padding: 10px 14px;
+    border-radius: 5px;
+    color: #687169;
+    font-size: 11px;
+    cursor: pointer
+}
+
+@media(max-width:850px) {
+    .loans-page {
+        padding: 30px 20px
+    }
+
+    .heading h1 {
+        font-size: 29px
+    }
+}
+
+@media(max-width:600px) {
+    .heading {
+        align-items: flex-start;
+        gap: 10px
+    }
+
+    .heading .new {
+        max-width: 145px;
+        line-height: 1.4
+    }
+
+    .loan-stats {
+        gap: 7px
+    }
+
+    .loan-stats article {
+        padding: 12px 9px
+    }
+
+    .loan-stats small {
+        font-size: 7px
+    }
+
+    .loan-stats strong {
+        font-size: 18px
+    }
+}

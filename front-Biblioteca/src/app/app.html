@@ -1,0 +1,79 @@
+@if (auth.autenticado()) {
+  <div class="layout">
+    <aside class="sidebar">
+      <a class="brand" routerLink="/catalogo" aria-label="Biblioteca, ir al catálogo">
+        <span class="brand-icon">B<span>.</span></span>
+        <span class="brand-word">Biblioteca<small>BIBLIOTECA · GESTIÓN</small></span>
+      </a>
+      <div class="nav-label">CATÁLOGO</div>
+      <nav aria-label="Navegación principal">
+        <a
+          routerLink="/catalogo"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <svg viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M4 3.5h12v13H4zM7 3.5v13M9.5 7h4M9.5 10h4" /></svg
+          >Todos los libros
+        </a>
+        @if (auth.esAdmin()) {
+          <a routerLink="/libros/nuevo" routerLinkActive="active">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 4v12M4 10h12" /></svg>Registrar
+            libro
+          </a>
+          <a routerLink="/categorias" routerLinkActive="active">
+            <svg viewBox="0 0 20 20" aria-hidden="true">
+              <path d="M4 4h12M4 8h12M4 12h8M4 16h6" />
+            </svg>
+            Categorías
+          </a>
+        }
+      </nav>
+      @if (auth.esAdmin()) {
+        <div class="nav-rule"></div>
+        <div class="nav-label">CIRCULACIÓN</div>
+        <nav aria-label="Circulación">
+          <a routerLink="/prestamos" routerLinkActive="active">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 5h12v10H4zM7 8h6M7 11h4" /></svg
+            >Préstamos
+          </a>
+        </nav>
+      } @else {
+        <div class="nav-rule"></div>
+        <div class="nav-label">MI ACTIVIDAD</div>
+        <nav aria-label="Mi actividad">
+          <a routerLink="/mis-prestamos" routerLinkActive="active">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 5h12v10H4zM7 8h6M7 11h4" /></svg>
+            Mis préstamos
+          </a>
+        </nav>
+      }
+      <div class="sidebar-bottom">
+        <span class="avatar">{{ auth.email()?.slice(0, 1)?.toUpperCase() }}</span>
+        <div class="profile">
+          <strong>{{ auth.email() }}</strong><small>{{ auth.rol() }}</small>
+        </div>
+        <button
+          class="icon-button"
+          aria-label="Cerrar sesión"
+          title="Cerrar sesión"
+          (click)="salir()"
+        >
+          <svg viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M8 4H4v12h4M11 6l4 4-4 4M7 10h8" />
+          </svg>
+        </button>
+      </div>
+    </aside>
+    <main class="workspace">
+      <header class="topbar">
+        <span
+          >Biblioteca <i>/</i> <b>{{ breadcrumb }}</b></span
+        ><span class="today">{{ cabecera }}</span>
+      </header>
+      <router-outlet />
+    </main>
+  </div>
+} @else {
+  <router-outlet />
+}

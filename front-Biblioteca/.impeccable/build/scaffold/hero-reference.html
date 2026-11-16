@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Scaffold reference: comp-01-cover.png</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@700&display=swap">
+  <link rel="stylesheet" href="layout.css">
+  <style>html,body{margin:0}body{background:#f8f8e8}.region{box-sizing:border-box}.region.text p{white-space:pre-wrap}</style>
+</head>
+<body>
+<!-- Reference only. Every region sits at its measured box inside a comp-aspect frame. Take the boxes (layout.css), keep your own semantic structure. -->
+<main class="comp-frame" style="max-width:1440px">
+  <div class="r-page-ground region chrome" data-region="page-ground"><!-- Pale uncoated-paper field across the page. --></div>
+  <div class="r-navigation-rail region chrome" data-region="navigation-rail"><!-- Narrow catalog index rail and account footer. --></div>
+  <div class="r-brand-initial region text" data-region="brand-initial"><!-- Letter B and red full stop. --><p style="line-height:1.05;margin:0">brand-initial</p></div>
+  <div class="r-brand-caption region text" data-region="brand-caption"><!-- BIBLIOTECA · GESTIÓN. --><p style="line-height:1.05;margin:0">brand-caption</p></div>
+  <div class="r-catalog-section-label region text" data-region="catalog-section-label"><!-- CATÁLOGO navigation group label. --><p style="font-size:var(--r-catalog-section-label-font);line-height:1.05;margin:0">catalog-section-label</p></div>
+  <div class="r-nav-all-books region control" data-region="nav-all-books"><!-- Selected Todos los libros navigation item and outlined book icon.: rebuild the control's chrome from the crop (comp-spec.mjs --crop nav-all-books); its ink box, border, fill, radius, and label size are the comp's --></div>
+  <div class="r-nav-create-book region control" data-region="nav-create-book"><!-- Registrar libro navigation link with plus icon.: rebuild the control's chrome from the crop (comp-spec.mjs --crop nav-create-book); its ink box, border, fill, radius, and label size are the comp's --></div>
+  <div class="r-circulation-section-label region text" data-region="circulation-section-label"><!-- CIRCULACIÓN navigation group label. --><p style="font-size:var(--r-circulation-section-label-font);line-height:1.05;margin:0">circulation-section-label</p></div>
+  <div class="r-nav-loans region control" data-region="nav-loans"><!-- Préstamos navigation link with return-book outline icon.: rebuild the control's chrome from the crop (comp-spec.mjs --crop nav-loans); its ink box, border, fill, radius, and label size are the comp's --></div>
+  <div class="r-account-footer region chrome" data-region="account-footer"><!-- Signed-in administrator avatar, email and role. --></div>
+  <div class="r-breadcrumb region text" data-region="breadcrumb"><!-- Biblioteca / 01 / PORTADA breadcrumb. --><p style="font-size:var(--r-breadcrumb-font);line-height:1.05;margin:0">breadcrumb</p></div>
+  <div class="r-catalog-caption region text" data-region="catalog-caption"><!-- CATÁLOGO DE COLECCIÓN. --><p style="font-size:var(--r-catalog-caption-font);line-height:1.05;margin:0">catalog-caption</p></div>
+  <div class="r-catalog-title region text" data-region="catalog-title"><!-- Large two-line Catálogo de libros headline. --><p style="font-size:var(--r-catalog-title-font);font-family:var(--r-catalog-title-family),sans-serif;font-weight:var(--r-catalog-title-weight);line-height:1.05;margin:0">catalog-title</p></div>
+  <div class="r-catalog-description region text" data-region="catalog-description"><!-- Explora la colección y encuentra tu próxima lectura. --><p style="font-size:var(--r-catalog-description-font);line-height:1.05;margin:0">catalog-description</p></div>
+  <div class="r-primary-register region control" data-region="primary-register"><!-- Rust-red Registrar libro button with plus icon.: rebuild the control's chrome from the crop (comp-spec.mjs --crop primary-register); its ink box, border, fill, radius, and label size are the comp's --></div>
+  <div class="r-count-titles region text" data-region="count-titles"><!-- Zero Títulos availability count. --><p style="font-size:var(--r-count-titles-font);line-height:1.05;margin:0">count-titles</p></div>
+  <div class="r-count-available region text" data-region="count-available"><!-- Zero Disponibles availability count. --><p style="font-size:var(--r-count-available-font);line-height:1.05;margin:0">count-available</p></div>
+  <div class="r-count-loans region text" data-region="count-loans"><!-- Zero En préstamo availability count. --><p style="font-size:var(--r-count-loans-font);line-height:1.05;margin:0">count-loans</p></div>
+  <div class="r-search-control region control" data-region="search-control"><!-- Search input with magnifier and title, author or category hint.: rebuild the control's chrome from the crop (comp-spec.mjs --crop search-control); its ink box, border, fill, radius, and label size are the comp's --></div>
+  <div class="r-availability-filter region control" data-region="availability-filter"><!-- Todos los libros availability select.: rebuild the control's chrome from the crop (comp-spec.mjs --crop availability-filter); its ink box, border, fill, radius, and label size are the comp's --></div>
+  <div class="r-empty-cover region chrome" data-region="empty-cover"><!-- Typographic book-cover motif with B. mark and printed AÚN SIN TÍTULOS stamp. --></div>
+  <div class="r-cover-mark region text" data-region="cover-mark"><!-- Oversized B. cover mark. --><p style="line-height:1.05;margin:0">cover-mark</p></div>
+  <div class="r-cover-caption region text" data-region="cover-caption"><!-- CATÁLOGO DE BIBLIOTECA cover imprint. --><p style="font-size:var(--r-cover-caption-font);line-height:1.05;margin:0">cover-caption</p></div>
+  <div class="r-cover-stamp region text" data-region="cover-stamp"><!-- AÚN SIN TÍTULOS stamp. --><p style="line-height:1.05;margin:0">cover-stamp</p></div>
+  <div class="r-empty-title region text" data-region="empty-title"><!-- Una colección empieza con su primer libro. --><p style="font-size:var(--r-empty-title-font);line-height:1.05;margin:0">empty-title</p></div>
+  <div class="r-empty-description region text" data-region="empty-description"><!-- The API-backed empty catalog explanation. --><p style="font-size:var(--r-empty-description-font);line-height:1.05;margin:0">empty-description</p></div>
+  <div class="r-empty-register-action region control" data-region="empty-register-action"><!-- Registrar el primer libro text link and arrow.: rebuild the control's chrome from the crop (comp-spec.mjs --crop empty-register-action); its ink box, border, fill, radius, and label size are the comp's --></div>
+</main>
+</body>
+</html>

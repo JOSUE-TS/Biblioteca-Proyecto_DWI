@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-16T01:05:00.000Z",
+  "title": "Design System: Biblioteca",
+  "extensions": {
+    "colorMeta": {
+      "imprint": {
+        "role": "primary",
+        "displayName": "Sello terracota",
+        "canonical": "#a94730",
+        "tonalRamp": ["#2b1009", "#45190e", "#612515", "#7e321f", "#a94730", "#c86b50", "#df9880", "#f3d0c3"]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Papel de catálogo",
+        "canonical": "#f8f8e8",
+        "tonalRamp": ["#20201b", "#39392f", "#555548", "#777767", "#9d9d8d", "#c3c3b2", "#e0e0d1", "#f8f8e8"]
+      },
+      "index-paper": {
+        "role": "neutral",
+        "displayName": "Papel de índice",
+        "canonical": "#f4f1e8",
+        "tonalRamp": ["#211f1a", "#39362e", "#554f43", "#756e5e", "#99917f", "#beb7a7", "#ddd7c8", "#f4f1e8"]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Tinta",
+        "canonical": "#242a25",
+        "tonalRamp": ["#101411", "#1a201b", "#242a25", "#3d443f", "#5b625d", "#7c837d", "#a5aaa5", "#d0d3cf"]
+      },
+      "secondary-ink": {
+        "role": "neutral",
+        "displayName": "Tinta secundaria",
+        "canonical": "#686c66",
+        "tonalRamp": ["#252824", "#383b36", "#4b4f49", "#5a5e58", "#686c66", "#858982", "#a6aaa3", "#c9cbc5"]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Filete de papel",
+        "canonical": "#d8d1c3",
+        "tonalRamp": ["#39362e", "#514d43", "#6e695d", "#918a7b", "#b0a99a", "#c5bfb1", "#d8d1c3", "#eeeae1"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Shippori Mincho", "purpose": "Titulares editoriales del catálogo." },
+      "heading": { "displayName": "Shippori Mincho", "purpose": "Títulos de páginas, formularios y estados vacíos." },
+      "body": { "displayName": "DM Sans", "purpose": "Navegación, campos, datos y lectura de interfaz." }
+    },
+    "shadows": [
+      { "name": "stacked-cover", "value": "6px 6px 0 #eee8d9", "purpose": "Sugiere páginas superpuestas en la cubierta del estado vacío." }
+    ],
+    "motion": [
+      { "name": "control-hover", "value": "background 180ms ease", "purpose": "Feedback breve al pasar sobre la acción primaria." }
+    ],
+    "breakpoints": [
+      { "name": "compact-index", "value": "760px" },
+      { "name": "single-column", "value": "560px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Acción primaria",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Acción principal para registrar o confirmar un movimiento.",
+      "html": "<button class=\"ds-button-primary\">Registrar libro</button>",
+      "css": ".ds-button-primary{background:#a94730;color:#fff;border:0;border-radius:0;padding:13px 17px;font:600 10px 'DM Sans',Arial,sans-serif;transition:background 180ms ease}.ds-button-primary:hover{background:#843925}.ds-button-primary:focus-visible{outline:2px solid #a94730;outline-offset:3px}.ds-button-primary:disabled{opacity:.55;cursor:wait}"
+    },
+    {
+      "name": "Campo de formulario",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Entrada bibliográfica con foco visible.",
+      "html": "<label class=\"ds-field\">Título<input placeholder=\"Título del libro\"></label>",
+      "css": ".ds-field{display:grid;gap:8px;color:#383e38;font:500 11px 'DM Sans',Arial,sans-serif}.ds-field input{height:42px;padding:0 11px;border:1px solid #cfc7b7;border-radius:0;background:#fffdf7;color:#242a25;font:400 12px 'DM Sans',Arial,sans-serif}.ds-field input:focus{border-color:#a94730;outline:2px solid #a9473033;outline-offset:1px}"
+    },
+    {
+      "name": "Elemento de índice",
+      "kind": "nav",
+      "refersTo": "navigation-index",
+      "description": "Enlace de navegación seleccionado dentro del índice lateral.",
+      "html": "<a class=\"ds-index-item\" href=\"#catalogo\"><svg viewBox=\"0 0 20 20\" aria-hidden=\"true\"><path d=\"M4 3.5h12v13H4zM7 3.5v13\"/></svg>Todos los libros</a>",
+      "css": ".ds-index-item{display:flex;align-items:center;gap:10px;min-height:37px;padding:0 9px;background:#e9e3d6;color:#242a25;text-decoration:none;font:400 11px 'DM Sans',Arial,sans-serif}.ds-index-item svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.4}.ds-index-item:focus-visible{outline:2px solid #a94730;outline-offset:2px}"
+    },
+    {
+      "name": "Banda de contadores",
+      "kind": "custom",
+      "refersTo": "catalog-summary",
+      "description": "Totales reales de títulos, disponibilidad y préstamos.",
+      "html": "<div class=\"ds-summary\"><strong>0</strong><span>Títulos</span><i></i><strong>0</strong><span>Disponibles</span></div>",
+      "css": ".ds-summary{display:flex;align-items:center;gap:9px;padding:12px 0;border-block:1px solid #bdb5a5;color:#686c66;font:400 9px 'DM Sans',Arial,sans-serif}.ds-summary strong{color:#242a25;font:500 14px 'DM Sans',Arial,sans-serif;font-variant-numeric:tabular-nums}.ds-summary i{height:17px;border-left:1px solid #d2cabb;margin:0 10px}"
+    },
+    {
+      "name": "Cubierta de estado vacío",
+      "kind": "custom",
+      "refersTo": "empty-cover",
+      "description": "Motivo tipográfico que hace visible la colección aún no poblada.",
+      "html": "<div class=\"ds-cover\"><strong>B<span>.</span></strong><small>CATÁLOGO<br>DE BIBLIOTECA</small><b>AÚN SIN<br>TÍTULOS</b></div>",
+      "css": ".ds-cover{position:relative;width:147px;height:178px;padding:14px 16px;background:linear-gradient(90deg,#c5b596 0 9px,#d8cbb5 9px);border:1px solid #b9a98c;box-shadow:6px 6px 0 #eee8d9;color:#763f30}.ds-cover strong{display:block;font:700 47px/.9 'Shippori Mincho',Georgia,serif;letter-spacing:-.09em}.ds-cover strong span{color:#a94730}.ds-cover small{display:block;margin-top:27px;color:#64594a;font:400 6px/1.6 'DM Sans',Arial,sans-serif;letter-spacing:.15em}.ds-cover b{position:absolute;left:14px;right:14px;bottom:15px;padding:5px 7px;border:1px solid #a94730;color:#a94730;font:600 9px/.98 'Shippori Mincho',Georgia,serif}"
+    }
+  ],
+  "narrative": {
+    "northStar": "El catálogo del sello editorial",
+    "overview": "Biblioteca presenta la colección como un catálogo de publicaciones: tipografía de imprenta, papel cálido, filetes finos y una marca terracota usada con moderación. El sistema conserva la familiaridad de una herramienta académica y deja que los registros de libros, lectores y préstamos sean el contenido principal.\n\nLa navegación funciona como un índice lateral. Las páginas de trabajo usan superficies planas y controles directos; los datos vienen de la API y los estados vacíos explican cómo comenzar sin rellenar la colección con ejemplos inventados.",
+    "keyCharacteristics": [
+      "Composición de catálogo editorial con índice fijo y área de lectura amplia.",
+      "Shippori Mincho para títulos y DM Sans para controles y datos.",
+      "Papel cálido, tinta oscura y acento terracota reservado para acciones.",
+      "Catálogo y préstamos muestran solo datos persistidos por el backend."
+    ],
+    "rules": [
+      { "name": "The Sello Rule", "body": "El terracota marca acciones y estados; no se usa como decoración de paneles enteros.", "section": "colors" },
+      { "name": "The Two Voices Rule", "body": "La serif vive en titulares y títulos de contenido; botones, datos, navegación y campos usan la sans.", "section": "typography" }
+    ],
+    "dos": [
+      "Mantener la búsqueda, filtros y contadores vinculados a las respuestas de la API.",
+      "Explicar los estados vacío, cargando y error con una acción de recuperación clara.",
+      "Usar SVG para iconos de navegación y mantener los controles accesibles por teclado."
+    ],
+    "donts": [
+      "Inventar libros, categorías, lectores o préstamos para llenar la interfaz.",
+      "Añadir tarjetas uniformes para cada grupo de información cuando un filete basta.",
+      "Usar el acento terracota en adornos sin significado funcional.",
+      "Añadir una línea de kicker o eyebrow encima de los títulos."
+    ]
+  }
+}

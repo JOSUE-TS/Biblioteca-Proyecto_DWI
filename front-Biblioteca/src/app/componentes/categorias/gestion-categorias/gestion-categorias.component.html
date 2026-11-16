@@ -1,0 +1,78 @@
+<section class="category-page">
+  <a routerLink="/catalogo" class="category-back">← Volver al catálogo</a>
+  <header class="category-heading">
+    <div>
+      <h1>Categorías</h1>
+      <p>Organiza la colección para que los lectores encuentren sus temas de interés.</p>
+    </div>
+    <span class="category-count"
+      >{{ categorias.length }} {{ categorias.length === 1 ? 'categoría' : 'categorías' }}</span
+    >
+  </header>
+
+  @if (mensaje) {
+    <p class="category-message success">{{ mensaje }}</p>
+  }
+  @if (error) {
+    <p class="category-message error">{{ error }}</p>
+  }
+
+  <div class="category-layout">
+    <form class="category-form" [formGroup]="form" (ngSubmit)="guardar()">
+      <h2>{{ editando ? 'Editar categoría' : 'Nueva categoría' }}</h2>
+      <label
+        >Nombre *
+        <input formControlName="nombre" maxlength="80" placeholder="Ej. Literatura peruana" />
+        @if (form.controls.nombre.touched && form.controls.nombre.invalid) {
+          <small>Escribe un nombre de hasta 80 caracteres.</small>
+        }
+      </label>
+      <label
+        >Descripción
+        <textarea
+          formControlName="descripcion"
+          maxlength="240"
+          rows="4"
+          placeholder="Temas o materias que agrupa"
+        ></textarea>
+      </label>
+      <div class="category-actions">
+        @if (editando) {
+          <button type="button" class="category-cancel" (click)="cancelarEdicion()">
+            Cancelar
+          </button>
+        }
+        <button type="submit" class="category-save" [disabled]="guardando">
+          {{ guardando ? 'Guardando…' : editando ? 'Guardar cambios' : 'Crear categoría' }}
+        </button>
+      </div>
+    </form>
+
+    <section class="category-list" aria-label="Categorías registradas">
+      <div class="category-list-head">
+        <h2>Índice de materias</h2>
+        <span>CATEGORÍAS DE LA COLECCIÓN</span>
+      </div>
+      @if (cargando) {
+        <p class="category-empty">Cargando categorías…</p>
+      } @else if (categorias.length) {
+        @for (categoria of categorias; track categoria.id) {
+          <article class="category-row">
+            <div>
+              <h3>{{ categoria.nombre }}</h3>
+              <p>{{ categoria.descripcion || 'Sin descripción' }}</p>
+            </div>
+            <div class="category-row-actions">
+              <button type="button" (click)="editar(categoria)">Editar</button>
+              <button type="button" (click)="borrar(categoria)">Eliminar</button>
+            </div>
+          </article>
+        }
+      } @else {
+        <p class="category-empty">
+          Aún no hay categorías. Crea la primera para clasificar los libros.
+        </p>
+      }
+    </section>
+  </div>
+</section>

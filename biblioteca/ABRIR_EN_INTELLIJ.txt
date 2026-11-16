@@ -1,0 +1,18 @@
+PROYECTO BIBLIOTECA - JAVA 21
+
+1. Extrae esta carpeta en una ubicacion nueva (no encima del proyecto anterior).
+2. En IntelliJ, cierra el proyecto anterior (File > Close Project).
+3. En la pantalla inicial, pulsa Open y selecciona la carpeta biblioteca que acabas de extraer.
+4. Si aparece la opcion de cargar Maven, elige Load Maven Project y espera a la sincronizacion.
+   Tambien puedes hacer clic derecho en pom.xml > Add as Maven Project.
+5. En File > Project Structure, selecciona SDK 21 y Language level 21.
+6. En Settings > Build, Execution, Deployment > Build Tools > Maven > Runner, selecciona JRE 21.
+7. En Maven, pulsa Reload All Maven Projects.
+8. Abre la terminal situada en la carpeta biblioteca y ejecuta:
+   .\mvnw.cmd -v
+   .\mvnw.cmd -U clean compile
+9. Comprueba que la compilacion termine en BUILD SUCCESS.
+
+El pom.xml ya usa Java 21 y el compilador release=21.
+Se retiraron .idea y target porque son configuraciones y archivos generados del proyecto anterior.
+No se ha modificado el codigo fuente ni application.properties.

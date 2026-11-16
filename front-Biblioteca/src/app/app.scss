@@ -1,0 +1,229 @@
+:host {
+  display: block;
+  min-height: 100vh;
+}
+.layout {
+  min-height: 100vh;
+}
+.sidebar {
+  position: fixed;
+  inset: 0 auto 0 0;
+  width: 236px;
+  padding: 28px 24px 24px;
+  background: #f4f1e8;
+  color: #242a25;
+  border-right: 1px solid #d8d1c3;
+  display: flex;
+  flex-direction: column;
+  z-index: 3;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-height: 57px;
+  text-decoration: none;
+  color: #202723;
+}
+.brand-icon {
+  font:
+    700 25px/1 'Shippori Mincho',
+    serif;
+  letter-spacing: -0.08em;
+}
+.brand-icon span {
+  color: #a94730;
+}
+.brand-word {
+  font:
+    700 18px/1.1 'Shippori Mincho',
+    serif;
+}
+.brand-word small {
+  display: block;
+  margin-top: 6px;
+  font:
+    500 8px/1 'DM Sans',
+    sans-serif;
+  letter-spacing: 0.17em;
+  color: #6b716b;
+}
+.nav-label {
+  margin: 38px 0 11px;
+  font-size: 8px;
+  letter-spacing: 0.19em;
+  color: #7a796f;
+}
+.sidebar nav {
+  display: grid;
+  gap: 4px;
+}
+.sidebar nav a {
+  min-height: 37px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 9px;
+  color: #575b55;
+  text-decoration: none;
+  font-size: 11px;
+  transition:
+    background 0.18s,
+    color 0.18s;
+}
+.sidebar nav a svg,
+.icon-button svg {
+  width: 15px;
+  height: 15px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex: none;
+}
+.sidebar nav a:hover,
+.sidebar nav a.active {
+  background: #e9e3d6;
+  color: #1e2823;
+}
+.nav-rule {
+  height: 1px;
+  background: #d8d1c3;
+  margin: 21px 0 0;
+}
+.nav-rule + .nav-label {
+  margin-top: 22px;
+}
+.sidebar-bottom {
+  margin-top: auto;
+  border-top: 1px solid #d8d1c3;
+  padding-top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.avatar {
+  width: 29px;
+  height: 29px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #e2d7bb;
+  color: #6b3a2d;
+  font:
+    500 14px 'Shippori Mincho',
+    serif;
+}
+.profile {
+  min-width: 0;
+  flex: 1;
+}
+.profile strong {
+  display: block;
+  max-width: 135px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #272e29;
+  font-size: 9px;
+  font-weight: 500;
+}
+.profile small {
+  display: block;
+  margin-top: 4px;
+  color: #79796f;
+  font-size: 7px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.icon-button {
+  border: 0;
+  background: transparent;
+  color: #595f57;
+  padding: 4px;
+  cursor: pointer;
+}
+.icon-button:hover {
+  color: #a94730;
+}
+.workspace {
+  min-height: 100vh;
+  margin-left: 236px;
+  background: #f8f8e8;
+}
+.topbar {
+  height: 57px;
+  padding: 0 clamp(28px, 4vw, 58px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ded8ca;
+  color: #6d7069;
+  font-size: 9px;
+}
+.topbar i {
+  font-style: normal;
+  color: #c1b8a8;
+  padding: 0 6px;
+}
+.topbar b {
+  font-weight: 500;
+  color: #383d37;
+}
+.topbar .today {
+  font-size: 8px;
+  letter-spacing: 0.17em;
+  color: #7d7a6f;
+}
+@media (max-width: 760px) {
+  .sidebar {
+    width: 62px;
+    padding: 22px 8px 17px;
+    align-items: center;
+  }
+  .brand {
+    justify-content: center;
+    padding: 0;
+  }
+  .brand-icon {
+    font-size: 23px;
+  }
+  .brand-word,
+  .nav-label,
+  .nav-rule,
+  .profile,
+  .icon-button {
+    display: none !important;
+  }
+  .sidebar nav {
+    width: 100%;
+    margin-top: 32px;
+  }
+  .sidebar nav a {
+    justify-content: center;
+    padding: 0;
+    font-size: 0;
+    min-height: 42px;
+  }
+  .sidebar nav a svg {
+    width: 17px;
+    height: 17px;
+  }
+  .sidebar-bottom {
+    width: 100%;
+    justify-content: center;
+    padding-top: 13px;
+  }
+  .workspace {
+    margin-left: 62px;
+  }
+  .topbar {
+    height: 49px;
+    padding: 0 16px;
+  }
+  .topbar .today {
+    font-size: 7px;
+    letter-spacing: 0.09em;
+  }
+}

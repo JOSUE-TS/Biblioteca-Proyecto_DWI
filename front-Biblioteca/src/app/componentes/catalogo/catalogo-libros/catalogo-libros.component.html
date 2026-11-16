@@ -1,0 +1,174 @@
+<section class="page-wrap">
+  <div class="page-heading">
+    <div>
+      <h1>
+        Catálogo<br class="title-break" />
+        de libros
+      </h1>
+      <p>Explora la colección y encuentra tu próxima lectura.</p>
+    </div>
+    @if (auth.esAdmin()) {
+      <a class="register-top" routerLink="/libros/nuevo"
+        ><span aria-hidden="true">＋</span> Registrar libro</a
+      >
+    }
+  </div>
+  <div class="stats" aria-label="Resumen del catálogo">
+    <div>
+      <strong>{{ libros.length }}</strong><span>Títulos</span>
+    </div>
+    <div>
+      <strong>{{ disponibles }}</strong><span>Ejemplares disponibles</span>
+    </div>
+    <div>
+      <strong>{{ ocupados }}</strong><span>En préstamo</span>
+    </div>
+  </div>
+  <div class="catalog-tools">
+    <label class="search"
+      ><svg viewBox="0 0 20 20" aria-hidden="true">
+        <circle cx="8.7" cy="8.7" r="5.5" />
+        <path d="m13 13 4 4" /></svg
+      ><input
+        aria-label="Buscar libros"
+        placeholder="Buscar por título, autor o categoría"
+        [value]="busqueda"
+        (input)="busqueda = $any($event.target).value; filtrar()"
+    /></label>
+    <select
+      aria-label="Filtrar disponibilidad"
+      [value]="filtro"
+      (change)="filtro = $any($event.target).value; filtrar()"
+    >
+      <option value="todos">Todos los libros</option>
+      <option value="disponibles">Disponibles</option>
+      <option value="prestados">En préstamo</option>
+    </select>
+    <select
+      aria-label="Filtrar por categoría"
+      [value]="categoriaFiltro"
+      (change)="categoriaFiltro = $any($event.target).value; filtrar()"
+    >
+      <option value="todas">Todas las categorías</option>
+      @for (categoria of categorias; track categoria.id) {
+        <option [value]="categoria.id">{{ categoria.nombre }}</option>
+      }
+    </select>
+    <button
+      class="refresh"
+      (click)="cargar()"
+      [disabled]="cargando"
+      aria-label="Actualizar catálogo"
+      title="Actualizar catálogo"
+    >
+      <svg viewBox="0 0 20 20" aria-hidden="true">
+        <path
+          d="M16 8a6.5 6.5 0 0 0-11.2-2L3 8M3 4v4h4M4 12a6.5 6.5 0 0 0 11.2 2L17 12m0 4v-4h-4"
+        />
+      </svg>
+    </button>
+  </div>
+  @if (mensaje) {
+    <p class="notice success">{{ mensaje }}</p>
+  }
+  @if (error) {
+    <p class="notice error">{{ error }}</p>
+  }
+  @if (cargando) {
+    <div class="empty loading-state" aria-live="polite">Consultando la colección…</div>
+  } @else if (filtrados.length) {
+    <div class="book-grid">
+      @for (libro of filtrados; track libro.id) {
+        <article class="book-card">
+          <div
+            class="book-cover"
+            [class.cover-alt]="$index % 3 === 1"
+            [class.cover-dark]="$index % 3 === 2"
+          >
+            @if (libro.portadaUrl) {
+              <img
+                class="cover-image"
+                [src]="urlPortada(libro.portadaUrl)"
+                [alt]="'Portada de ' + libro.titulo"
+              />
+            } @else {
+              <span class="cover-mark">{{ iniciales(libro.titulo) }}<i>.</i></span
+              ><span class="cover-bottom">BIBLIOTECA<br />EDICIÓN DE COLECCIÓN</span>
+            }
+          </div>
+          <div class="book-info">
+            <div class="book-meta">
+              <span class="category">{{ libro.categoria?.nombre || 'General' }}</span><span
+                class="availability"
+                [class.unavailable]="!libro.disponible"
+                ><i></i>{{ libro.ejemplaresDisponibles }} / {{ libro.ejemplaresTotales }} disponibles</span
+              >
+            </div>
+            <h2>{{ libro.titulo }}</h2>
+            <p class="author">{{ libro.autor }}</p>
+            <div class="book-detail">
+              {{ libro.editorial || 'Editorial no registrada' }} <span>·</span>
+              {{ libro.anioPublicacion || 's. f.' }}
+            </div>
+            @if (auth.esAdmin()) {
+              <div class="admin-actions">
+                <a [routerLink]="['/libros/editar', libro.id]">Editar ficha</a
+                ><button (click)="borrar(libro)">Eliminar</button>
+              </div>
+            } @else {
+              <button class="details-action" (click)="seleccionado = libro">Ver ficha y préstamo →</button>
+            }
+          </div>
+        </article>
+      }
+    </div>
+  } @else if (!libros.length) {
+    <div class="empty empty-collection">
+      <div class="empty-cover" aria-hidden="true">
+        <span class="cover-mark">B<span>.</span></span
+        ><small>CATÁLOGO<br />DE BIBLIOTECA</small><b>AÚN SIN<br />TÍTULOS</b>
+      </div>
+      <div class="empty-copy">
+        <h2>Una colección empieza<br />con su primer libro.</h2>
+        <p>
+          El catálogo está vacío por ahora. Registra un ejemplar y aparecerá aquí con sus datos y
+          disponibilidad.
+        </p>
+        @if (auth.esAdmin()) {
+          <a class="first-register" routerLink="/libros/nuevo"
+            >Registrar el primer libro <span aria-hidden="true">→</span></a
+          >
+        }
+      </div>
+    </div>
+  } @else {
+    <div class="empty search-empty">
+      <span class="empty-mark" aria-hidden="true">⌕</span><strong>No encontramos libros</strong>
+      <p>Prueba otra búsqueda o cambia el filtro.</p>
+    </div>
+  }
+</section>
+@if (seleccionado) {
+  <div class="detail-backdrop" (click)="seleccionado = null">
+    <section class="detail-dialog" role="dialog" aria-modal="true" [attr.aria-label]="'Ficha de ' + seleccionado.titulo" (click)="$event.stopPropagation()">
+      <button class="detail-close" type="button" aria-label="Cerrar ficha" (click)="seleccionado = null">×</button>
+      <div class="detail-cover">
+        @if (seleccionado.portadaUrl) { <img [src]="urlPortada(seleccionado.portadaUrl)" [alt]="'Portada de ' + seleccionado.titulo" /> }
+        @else { <span>{{ iniciales(seleccionado.titulo) }}</span> }
+      </div>
+      <div class="detail-copy">
+        <span class="category">{{ seleccionado.categoria?.nombre || 'General' }}</span>
+        <h2>{{ seleccionado.titulo }}</h2><p class="detail-author">{{ seleccionado.autor }}</p>
+        <dl><div><dt>Editorial</dt><dd>{{ seleccionado.editorial || 'Sin registrar' }}</dd></div>
+          <div><dt>Año</dt><dd>{{ seleccionado.anioPublicacion || 'Sin registrar' }}</dd></div>
+          <div><dt>ISBN</dt><dd>{{ seleccionado.isbn || 'Sin registrar' }}</dd></div>
+          <div><dt>Disponibilidad</dt><dd>{{ seleccionado.ejemplaresDisponibles }} de {{ seleccionado.ejemplaresTotales }} ejemplares disponibles</dd></div>
+        </dl>
+        @if (seleccionado.disponible) {
+          <label class="due-date">Fecha prevista de devolución<input type="date" [min]="fechaEstimada" [value]="fechaEstimada" (input)="fechaEstimada = $any($event.target).value" /></label>
+          <button class="borrow" [disabled]="solicitando" (click)="solicitarPrestamo()">{{ solicitando ? 'Registrando…' : 'Solicitar préstamo →' }}</button>
+        } @else { <p class="unavailable-note">Este ejemplar no está disponible en este momento.</p> }
+      </div>
+    </section>
+  </div>
+}

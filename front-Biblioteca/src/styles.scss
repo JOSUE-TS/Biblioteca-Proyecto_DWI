@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Shippori+Mincho:wght@400;500;600;700&display=swap');
+:root {
+  color-scheme: light;
+  --paper: #f8f8e8;
+  --rail: #f4f1e8;
+  --ink: #242a25;
+  --muted: #686c66;
+  --rule: #d8d1c3;
+  --imprint: #a94730;
+  --serif: 'Shippori Mincho', Georgia, serif;
+  --sans: 'DM Sans', Arial, sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--paper);
+  font-family: var(--sans);
+  color: var(--ink);
+}
+body {
+  font-size: 14px;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--imprint);
+  outline-offset: 3px;
+}
+::selection {
+  background: #a9473033;
+  color: #28241d;
+}
+input,
+textarea {
+  caret-color: var(--imprint);
+}
+* {
+  scrollbar-color: #bcb29e #f4f1e8;
+  scrollbar-width: thin;
+}
+
+/* Shared editorial treatment for record forms and circulation tools. */
+.form-page,
+.loans-page {
+  max-width: 1440px !important;
+  margin: 0 auto !important;
+  padding: 46px clamp(28px, 4vw, 58px) 64px !important;
+}
+.form-page .back,
+.register-page .back {
+  color: #8e402e !important;
+  text-decoration: none;
+}
+.form-page .back:hover,
+.register-page .back:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.form-heading,
+.loans-page .heading {
+  margin: 31px 0 26px !important;
+}
+.form-heading .eyebrow,
+.loans-page .eyebrow,
+.dialog .eyebrow,
+.register-card .eyebrow,
+.login-card .eyebrow {
+  color: #8e402e !important;
+  font-size: 9px !important;
+  letter-spacing: 0.18em !important;
+}
+.form-heading h1,
+.loans-page .heading h1,
+.dialog h2,
+.register-card h1,
+.login-card h2 {
+  font-family: var(--serif) !important;
+  font-weight: 500 !important;
+  letter-spacing: -0.04em !important;
+  color: #242a25 !important;
+}
+.form-heading h1,
+.loans-page .heading h1 {
+  font-size: clamp(38px, 4vw, 54px) !important;
+  margin: 10px 0 !important;
+}
+.form-heading p,
+.loans-page .heading p,
+.dialog > p,
+.register-card .intro,
+.login-card .muted {
+  color: #686c66 !important;
+  line-height: 1.7;
+}
+.form-card,
+.loan-stats article,
+.table-wrap,
+.register-card {
+  background: #fbf9f2 !important;
+  border: 1px solid #d8d1c3 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+.form-card {
+  padding: 30px !important;
+}
+.form-card h2 {
+  font: 500 23px var(--serif) !important;
+  color: #242a25 !important;
+}
+.form-card .hint {
+  color: #686c66 !important;
+}
+.fields label,
+.dialog label,
+.register-card label,
+.login-card label {
+  color: #383e38 !important;
+  font-weight: 500 !important;
+}
+.fields input,
+.fields select,
+.dialog input,
+.dialog select,
+.dialog textarea,
+.register-card input,
+.login-card input {
+  border: 1px solid #cfc7b7 !important;
+  border-radius: 0 !important;
+  background: #fffdf7 !important;
+  color: #242a25 !important;
+  font-family: var(--sans) !important;
+  box-shadow: none !important;
+}
+.fields input:focus,
+.fields select:focus,
+.dialog input:focus,
+.dialog select:focus,
+.dialog textarea:focus,
+.register-card input:focus,
+.login-card input:focus {
+  border-color: #a94730 !important;
+}
+.save,
+.loans-page .new,
+.register-card button,
+.login-card .primary {
+  border-radius: 0 !important;
+  background: #a94730 !important;
+  color: white !important;
+}
+.save:hover,
+.loans-page .new:hover,
+.register-card button:hover,
+.login-card .primary:hover {
+  background: #843925 !important;
+}
+.cancel {
+  border-radius: 0 !important;
+  color: #555b53 !important;
+}
+.actions {
+  border-color: #d8d1c3 !important;
+}
+.loans-page .heading {
+  align-items: flex-end !important;
+}
+.loans-page .heading > div {
+  margin-bottom: 3px;
+}
+.loan-stats {
+  gap: 0 !important;
+  border-top: 1px solid #bdb5a5;
+  border-bottom: 1px solid #bdb5a5;
+  margin: 26px 0 !important;
+}
+.loan-stats article {
+  padding: 16px 18px !important;
+  border: 0 !important;
+  border-right: 1px solid #d8d1c3 !important;
+}
+.loan-stats article:last-child {
+  border-right: 0 !important;
+}
+.loan-stats small,
+.table-wrap th {
+  color: #71746c !important;
+  letter-spacing: 0.13em !important;
+}
+.loan-stats strong {
+  font-family: var(--serif);
+  font-size: 24px !important;
+  font-weight: 500 !important;
+  color: #242a25 !important;
+}
+.table-wrap {
+  overflow-x: auto;
+}
+.table-wrap table {
+  min-width: 720px;
+}
+.table-wrap th {
+  background: #f1eee4 !important;
+  font-size: 8px !important;
+}
+.table-wrap td {
+  border-color: #e2dccf !important;
+  color: #5a6059 !important;
+}
+.table-wrap td strong {
+  font-weight: 600 !important;
+  color: #292f29 !important;
+}
+.status,
+.status.returned {
+  border-radius: 0 !important;
+  background: #f1e8d5 !important;
+  color: #81513a !important;
+}
+.status.returned {
+  background: #e7ebdf !important;
+  color: #415a43 !important;
+}
+.return {
+  border-color: #cfc7b7 !important;
+  border-radius: 0 !important;
+  color: #8e402e !important;
+}
+.ok {
+  background: #e8eee3 !important;
+  color: #38543d !important;
+  border-radius: 0 !important;
+}
+.error,
+.dialog .error {
+  border-radius: 0 !important;
+}
+.dialog {
+  border: 1px solid #d8d1c3 !important;
+  border-radius: 0 !important;
+  background: #fbf9f2 !important;
+  box-shadow: 0 20px 60px #28241d30 !important;
+}
+.dialog h2 {
+  font-size: 31px !important;
+}
+.dialog-actions {
+  padding-top: 10px;
+  border-top: 1px solid #d8d1c3;
+}
+.register-page {
+  background: var(--paper) !important;
+}
+.register-card {
+  padding: 38px !important;
+}
+.register-card h1,
+.login-card h2 {
+  font-size: 39px !important;
+}
+.register-card .foot a,
+.login-foot a {
+  color: #8e402e !important;
+}
+.login-page {
+  background: var(--paper) !important;
+  grid-template-columns: 1fr 1fr !important;
+}
+.login-art {
+  background: #252c27 !important;
+  color: #f8f8e8 !important;
+}
+.login-art:after {
+  border-radius: 0 !important;
+  border-color: #ffffff25 !important;
+  box-shadow:
+    35px 35px 0 -34px #ffffff30,
+    70px 70px 0 -69px #ffffff25 !important;
+  transform: rotate(45deg) !important;
+}
+.art-mark {
+  color: #d3b98b !important;
+}
+.art-copy .eyebrow {
+  color: #cfb99b !important;
+}
+.art-copy h1 {
+  font-family: var(--serif) !important;
+  font-weight: 500 !important;
+  letter-spacing: -0.045em !important;
+}
+.art-copy p,
+.art-footer {
+  color: #d0cfc3 !important;
+}
+.login-side {
+  background: var(--paper) !important;
+}
+.login-card {
+  max-width: 410px !important;
+}
+.login-card h2 {
+  margin-top: 12px !important;
+}
+.login-card .muted {
+  margin-bottom: 28px !important;
+}
+.login-card form {
+  gap: 11px !important;
+}
+.login-card input {
+  height: 47px !important;
+  padding: 0 13px !important;
+}
+.login-card .submit {
+  margin-top: 12px !important;
+  padding: 14px 16px !important;
+}
+.login-foot {
+  color: #686c66 !important;
+}
+.mobile-brand {
+  color: #242a25 !important;
+}
+.alert,
+.registered,
+.register-card .error {
+  border-radius: 0 !important;
+}
+@media (max-width: 850px) {
+  .login-page {
+    grid-template-columns: 1fr !important;
+  }
+  .login-art {
+    display: none !important;
+  }
+  .login-side {
+    min-height: 100vh;
+  }
+  .form-page,
+  .loans-page {
+    padding: 32px 22px !important;
+  }
+}
+@media (max-width: 560px) {
+  .form-page,
+  .loans-page {
+    padding: 28px 16px !important;
+  }
+  .form-card,
+  .register-card {
+    padding: 23px 18px !important;
+  }
+  .loan-stats article {
+    padding: 13px 9px !important;
+  }
+  .loans-page .heading {
+    align-items: flex-start !important;
+    gap: 12px;
+  }
+  .loans-page .heading > div {
+    min-width: 0;
+  }
+  .loans-page .heading h1 {
+    font-size: 38px !important;
+  }
+  .loans-page .heading .new {
+    max-width: 130px;
+    line-height: 1.5;
+  }
+  .dialog {
+    padding: 26px 20px !important;
+  }
+}
+/* Reader catalog details and borrowing dialog */
+.details-action{margin-top:13px;padding:0;border:0;background:none;color:#a33620;font:600 9px 'DM Sans',sans-serif;cursor:pointer}
+.detail-backdrop{position:fixed;inset:0;z-index:20;display:grid;place-items:center;padding:20px;background:#17211dcc}.detail-dialog{position:relative;display:grid;grid-template-columns:190px 1fr;gap:26px;width:min(680px,100%);padding:30px;background:#f8f7f2}.detail-close{position:absolute;top:8px;right:12px;border:0;background:none;font-size:25px;cursor:pointer}.detail-cover{min-height:260px;display:grid;place-items:center;background:#d7c9ad;color:#744132;font:48px 'Shippori Mincho',Georgia,serif}.detail-cover img{width:100%;height:100%;min-height:260px;object-fit:cover}.detail-copy h2{font:500 29px/1.15 'Shippori Mincho',Georgia,serif;margin:12px 0 5px}.detail-author{color:#686c66;font-size:12px}.detail-copy dl{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}.detail-copy dt{font-size:9px;color:#777;text-transform:uppercase}.detail-copy dd{font-size:11px;margin:5px 0}.due-date{display:grid;gap:7px;color:#5f635d;font-size:10px}.due-date input{height:36px;padding:0 9px;border:1px solid #d8d1c3}.borrow{margin-top:12px;padding:11px 14px;border:0;background:#a94730;color:white;cursor:pointer}.unavailable-note{color:#8b4836;font-size:11px}
+@media(max-width:560px){.detail-dialog{grid-template-columns:80px 1fr;gap:14px;padding:24px 16px}.detail-cover,.detail-cover img{min-height:125px}.detail-cover{font-size:27px}.detail-copy h2{font-size:23px;margin-top:8px}}
